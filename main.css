@@ -12,8 +12,6 @@ svg,
 body {
   background-color: black;
   font-family: "Ikarus";
-  font-feature-settings: "calt" 1, "liga" 1, "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1;
-  font-variation-settings: "wght" 52.723, "wdth" 137.6628, "ital" 0.0033, "cont" 100;
   align-content: center;
   text-align: center;
   /* text-wrap: balance; */

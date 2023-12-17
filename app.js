@@ -25,36 +25,13 @@ document.body.appendChild(container);
 // {"tag":"ital","minValue":0,"defaultValue":0,"maxValue":12,"name":{}}
 // {"tag":"cont","minValue":0,"defaultValue":100,"maxValue":100,"name":{}}
 
-const allAxesText = document
-  .getElementById("0")
-  .animate(
-    [
-      { fontVariationSettings: `"wght" 200, "wdth" 60, "ital" 0, "cont" 0` },
-      { fontVariationSettings: `"wght" 900, "wdth" 140, "ital" 12, "cont" 100` },
-    ],
-    {
-      id: "allAxesText01",
-      duration: 1000,
-      iterations: Infinity,
-      easing: "cubic-bezier(0.42, 0, 0.58, 1)",
-      direction: "alternate"
-    },
-  );
-// allAxesText.pause();
+const myText = document.getElementById("0");
+function randomizeText() {
+  randomWeight = Math.random() * (900 - 200) + 200;
+  randomWidth = Math.random() * (140 - 60) + 60;
+  randomItalics = Math.random() * (12 - 0) + 0;
+  randomContrast = Math.random() * (100 - 0) + 0;
+  myText.style.fontVariationSettings = "\"wght\" " + randomWeight + ", \"wdth\" " + randomWidth + ", \"ital\" " + randomItalics + ", \"cont\" " + randomContrast;
+}
 
-const tremor = document
-  .getElementById("container")
-  .animate(
-    [
-      { transform: "translateX(-0.32px)" },
-      { transform: "translateX(0.32px)" },
-    ],
-    {
-      id: "baseTremor",
-      duration: 100,
-      iterations: Infinity,
-      easing: "linear",
-      direction: "alternate"
-    },
-  );
-// tremor.pause();
+setInterval(randomizeText, 140);

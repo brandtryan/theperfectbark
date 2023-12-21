@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Ikarus";
-  src: url("fonts/ABCIkarusv170-VariableVF.ttf") format("truetype-variations");
+  src: url("ABCIkarusv170-VariableVF.ttf") format("truetype-variations");
 }
 
 html {

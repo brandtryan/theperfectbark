@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Ikarus";
-  src: url("ABCIkarusv170-VariableVF.ttf") format("truetype-variations");
+  src: url("fonts/ABCIkarusv170-VariableVF.ttf") format("truetype-variations");
 }
 
 html {
@@ -13,23 +13,28 @@ html {
 svg,
 body {
   background-color: black;
+  overflow: hidden;
   font-family: "Ikarus";
   font-feature-settings: "calt" 1, "liga" 1, "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1;
   font-variation-settings: "wght" 200, "wdth" 100, "ital" 0, "cont" 0;
-  align-content: center;
-  text-align: center;
+  /* align-content: center;
+  text-align: center; */
   /* max-inline-size: 105ch;
   text-wrap: balance; */
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  /* margin: 0; */
+  margin: 0;
   /* letter-spacing: 0em; */
 }
 
 .words {
-  display: inline-flex;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
   padding: .24%;
   font-size: 3rem;
   color: antiquewhite;
+  will-change: font-variation-settings;
 }

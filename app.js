@@ -59,8 +59,8 @@ const weight = firstWord.animate(
     id: "animaWeight",
     delay: 0,
     direction: "alternate",
-    duration: 1000,
-    easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+    duration: 1250,
+    easing: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
     endDelay: 0,
     fill: "none",
     iterationStart: 0.0,
@@ -70,7 +70,7 @@ const weight = firstWord.animate(
   }
 );
 // wdth Range: 60 - 140
-const width = firstWord.animate(
+const wid = firstWord.animate(
   [
     { fontVariationSettings: `"wght" 47, "wdth" 60, "ital" 0, "cont" 0` },
     { fontVariationSettings: `"wght" 900, "wdth" 140, "ital" 0, "cont" 0` }
@@ -79,8 +79,8 @@ const width = firstWord.animate(
     id: "animaWidth",
     delay: 0,
     direction: "alternate",
-    duration: 2000,
-    easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+    duration: 2500,
+    easing: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
     endDelay: 300,
     fill: "none",
     iterationStart: 0.0,
@@ -99,8 +99,8 @@ const italics = firstWord.animate(
     id: "animaItalics",
     delay: 0,
     direction: "alternate",
-    duration: 1000,
-    easing: "cubic-bezier(0.87, 0, 0.13, 1)",
+    duration: 1250,
+    easing: "cubic-bezier(0.68, -0.6, 0.32, 1.6)",
     endDelay: 300,
     fill: "none",
     iterationStart: 0.0,
@@ -112,14 +112,14 @@ const italics = firstWord.animate(
 // cont Range: 0 - 100
 const contrast = firstWord.animate(
   [
-    { fontVariationSettings: `"wght" 200, "wdth" 60, "ital" 12, "cont" 100` },
+    { fontVariationSettings: `"wght" 47, "wdth" 60, "ital" 12, "cont" 500` },
     { fontVariationSettings: `"wght" 900, "wdth" 140, "ital" 0, "cont" 0` }
   ],
   {
     id: "animaContrast",
     delay: 0,
     direction: "alternate",
-    duration: 1000,
+    duration: 1250,
     easing: "cubic-bezier(0.83, 0, 0.17, 1)",
     endDelay: 300,
     fill: "none",
@@ -130,12 +130,11 @@ const contrast = firstWord.animate(
   }
 );
 
-
-// width.startTime = weight.startTime + 3000;
-// italics.startTime = weight.startTime + 500;
-// contrast.startTime = weight.startTime + 1500;
-
 weight.playbackRate = 2;
-width.playbackRate = 0.5;
-italics.playbackRate = 5;
+wid.playbackRate = 0.5;
+italics.playbackRate = 4;
 contrast.playbackRate = 2;
+
+document.getAnimations().forEach((Animation) => {
+  Animation.updatePlaybackRate(Animation.playbackRate * 0.75);
+});

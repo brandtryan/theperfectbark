@@ -4,23 +4,32 @@
 }
 
 html {
-  margin: 1% 1% 1%;
+  font-size: 100%;
+  margin: 2% 2% 2%;
   display: block;
+  line-height: 200%;
 }
 
 svg,
 body {
   background-color: black;
   font-family: "Ikarus";
+  font-feature-settings: "calt" 1, "liga" 1, "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1;
+  font-variation-settings: "wght" 200, "wdth" 100, "ital" 0, "cont" 0;
   align-content: center;
   text-align: center;
-  /* text-wrap: balance; */
-  margin: 1rem 1rem 1rem;
+  max-inline-size: 105ch;
+  text-wrap: balance;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  margin: 0;
+  /* letter-spacing: 0em; */
 }
 
 .words {
-  display: inline-block;
+  display: inline-flex;
   overflow: hidden;
-  font-size: 150px;
+  padding: .24%;
+  font-size: 3rem;
   color: antiquewhite;
 }

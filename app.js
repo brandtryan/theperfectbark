@@ -135,6 +135,6 @@ wid.playbackRate = 0.5;
 italics.playbackRate = 4;
 contrast.playbackRate = 2;
 
-document.getAnimations().forEach((Animation) => {
-  Animation.updatePlaybackRate(Animation.playbackRate * 0.75);
-});
+// document.getAnimations().forEach((Animation) => {
+//   Animation.updatePlaybackRate(Animation.playbackRate * 0.75);
+// });

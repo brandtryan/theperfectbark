@@ -3,38 +3,43 @@
   src: url("ABCIkarusv170-VariableVF.ttf") format("truetype-variations");
 }
 
-html {
-  font-size: 100%;
-  margin: 2% 2% 2%;
-  display: block;
-  line-height: 200%;
-}
-
 svg,
 body {
   background-color: black;
-  overflow: hidden;
   font-family: "Ikarus";
   font-feature-settings: "calt" 1, "liga" 1, "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1;
-  font-variation-settings: "wght" 200, "wdth" 100, "ital" 0, "cont" 0;
-  /* align-content: center;
-  text-align: center; */
-  /* max-inline-size: 105ch;
-  text-wrap: balance; */
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-  margin: 0;
-  /* letter-spacing: 0em; */
+  font-variation-settings: "wght" 295, "wdth" 100, "ital" 0, "cont" 0;
+  /* font-optical-sizing: auto; */
+  color: #aed1df;
 }
 
-.words {
-  height: 100vh;
+.container {
+  display: block;
+  width: 60vw;
+  margin: 20vh 20vw 0vh 20vw;
+
+  /* Center Container */
+  /* position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-60%, -50%); */
+
+  /* text-rendering: optimizeSpeed; */
+  line-height: 2.5em;
+  font-size: 100%;
+  overflow: visible;
+}
+
+.line-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  padding: .24%;
-  font-size: 3rem;
-  color: antiquewhite;
-  will-change: font-variation-settings;
+}
+
+.word {
+  display: inline-flex;
+  padding: .1vw;
+  font-size: 2vw;
+}
+
+#ln6w18 {
+  font-variation-settings: "wght" 295, "wdth" 100, "ital" 9, "cont" 0;
 }

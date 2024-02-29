@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Ikarus";
-  src: url("ABCIkarusv170-VariableVF.ttf") format("truetype-variations");
+  src: url("fonts/ABCIkarusv170-VariableVF.ttf") format("truetype-variations");
 }
 
 svg,
@@ -9,14 +9,14 @@ body {
   font-family: "Ikarus";
   font-feature-settings: "calt" 1, "liga" 1, "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1;
   font-variation-settings: "wght" 295, "wdth" 100, "ital" 0, "cont" 0;
-  /* font-optical-sizing: auto; */
   color: #aed1df;
 }
 
-.container {
+.master-container {
   display: block;
   width: 60vw;
-  margin: 20vh 20vw 0vh 20vw;
+  /* margin: 20vh 20vw 0vh 20vw; */
+  margin: 10vh 20vw 0;
 
   /* Center Container */
   /* position: absolute;
@@ -25,7 +25,7 @@ body {
   transform: translate(-60%, -50%); */
 
   /* text-rendering: optimizeSpeed; */
-  line-height: 2.5em;
+  line-height: 2.25em;
   font-size: 100%;
   overflow: visible;
 }
@@ -35,11 +35,11 @@ body {
 }
 
 .word {
-  display: inline-flex;
+  display: flex;
   padding: .1vw;
   font-size: 2vw;
 }
 
-#ln6w18 {
+#ln5w18 {
   font-variation-settings: "wght" 295, "wdth" 100, "ital" 9, "cont" 0;
 }

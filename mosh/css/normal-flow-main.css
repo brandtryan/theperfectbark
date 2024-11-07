@@ -1,0 +1,24 @@
+html {
+  font-size: 62.5%;
+}
+/*
+Remember to set fontsize 62.5% so 1 rem will equal 10 pixels.
+Use relative units everywhere for auto-responsiveness
+Remember margin collapsing!
+Don't forget box-sizing defaults to content-box, not borderbox
+Don't forget about viewport height/width (vh, vw)
+
+Strategy for Normal Flow: use <br> to fix number of words on each line.
+					use <span> for each word
+					use <p> for each line?
+					set displaytype to inline-block
+*/
+
+body {
+  background-color: antiquewhite;
+}
+
+p {
+  margin: 20px;
+  padding: 0;
+}

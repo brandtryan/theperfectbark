@@ -186,19 +186,19 @@ const lineDuration9 = lineReadingTime(wordArray9);
 // ANIMATIONS
 const vanishFrames = [
   { opacity: 1 },
-  { opacity: 0, transform: `translate(0, -5vh)` },
+  { opacity: 0.9, transform: `translate(330, -5vh)` },
 ];
 
 const vanishTiming = {
   id: "vanish",
   delay: 0,
   direction: "normal",
-  duration: 1000,
+  duration: 100,
   endDelay: 0,
   fill: "forwards",
-  easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+  // easing: "cubic-bezier(0.45, 0, 0.55, 1)",
   iterationStart: 0.0,
-  iterations: 1,
+  iterations: 11,
   composite: "replace",
   iterationComposite: "replace",
 };
@@ -212,12 +212,14 @@ const breathFrames = [
 const breathTiming = {
   delay: 0,
   direction: "normal",
-  duration: lineDuration0,
+  // duration: lineDuration0,
+	duration: 10,
   endDelay: 0,
   fill: "none",
-  easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+  // easing: "cubic-bezier(0.45, 0, 0.55, 1)",
+	easing: "linear",
   iterationStart: 0.0,
-  iterations: "1",
+  iterations: "3",
   composite: "replace",
   iterationComposite: "replace"
 }

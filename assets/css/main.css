@@ -1,0 +1,43 @@
+@font-face {
+  font-family: Social;
+  src: url('../fonts/ABCSocialPlusVariable-Trial.woff2') format(woff2);
+  font-weight: normal;
+  font-style: normal;
+  font-feature-settings: 'rvrn' 1;
+  font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' 0;
+}
+
+@font-face {
+  font-family: Social;
+  src: url('../fonts/ABCSocialPlusVariable-Trial.woff2') format(woff2);
+  font-weight: normal;
+  font-style: italic;
+  font-feature-settings: 'rvrn' 1;
+  font-variation-settings: 'wght' 400, 'wdth' 100, 'slnt' -12;
+}
+
+:root {
+  --fluid-16-48: clamp(1rem, 0.3043rem + 3.4783cqi, 3rem);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: Social, 'Courier New', Courier, monospace;
+  color: #333;
+  font-size: 62.5%;
+  background-color: bisque;
+}
+
+.container {
+  container-type: size;
+  font-size: var(--fluid-16-48);
+  margin: 0 auto;
+  max-width: 50ch;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* .fluid-type {
+  font-size: clamp(1rem, 4cqi, 3rem);
+  max-width: 70ch;
+} */

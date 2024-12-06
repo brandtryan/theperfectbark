@@ -1,0 +1,81 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: 'Gramercy';
+  src: url('../fonts/ABCGramercyVariable-Trial.woff2')
+    format('woff2-variations');
+  font-feature-settings: 'calt' 1, 'rlig' 1, 'rvrn' 1, 'kern' 1, 'rclt' 1,
+    'ss06' 1, 'dlig' 1, 'liga' 1, 'swsh' 1;
+  line-gap-override: normal;
+  font-weight: 200 1000;
+  font-optical-sizing: 12 72;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gramercy';
+  src: url('../fonts/ABCGramercyItalicVariable-Trial.woff2')
+    format('woff2-variations');
+  font-feature-settings: 'calt' 1, 'rlig' 1, 'rvrn' 1, 'kern' 1, 'rclt' 1,
+    'ss06' 1, 'dlig' 1, 'liga' 1;
+  line-gap-override: normal;
+  font-weight: 200 1000;
+  font-optical-sizing: 12 72;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* Reset */
+* {
+  /* border: 0; */
+  /* margin: 0; */
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* --fluid-16-48: clamp(1.6rem, 0.4869rem + 5.5653cqi, 4.8rem); */
+  --fluid-16-48: clamp(1rem, 0.1043rem + 3cqi, 2.2rem);
+}
+
+html {
+  font-size: 62.5%;
+  background-color: gold;
+}
+
+body {
+  width: 100%;
+  /* margin: 0 auto; */
+  font-family: 'Gramercy', Calibri, 'Trebuchet MS', Verdana, Arial, Helvetica,
+    sans-serif;
+  font-size: var(--fluid-16-48);
+  line-height: 3rem;
+  font-weight: 400;
+  font-feature-settings: 'liga' 1;
+}
+
+#app {
+  width: 98rem;
+  overflow: hidden;
+  padding: 2.5rem 0 0 0;
+}
+
+#content {
+  margin: 0 auto;
+  width: 50.3rem;
+  overflow: hidden;
+}
+
+p {
+  span {
+    display: block;
+  }
+}
+
+#p00-ln00::first-line {
+  float: left;
+  font-feature-settings: 'swsh';
+  font-weight: 400;
+  /* padding: 1.3rem, 0.2rem, 0, 0; */
+}

@@ -4,7 +4,6 @@ template.innerHTML = `
     :host {
       display: grid;
       grid-template-columns: auto 38ch auto;
-      grid-template-rows: 2ch max-content;
       grid-template-areas: "left center right";
       width: 100cqw;
     }
@@ -29,23 +28,6 @@ template.innerHTML = `
       text-align: right;
     }
   </style>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
-  <div class="line"><slot name="line"></slot></div>
   <div class="line"><slot name="line"></slot></div>
 `;
 

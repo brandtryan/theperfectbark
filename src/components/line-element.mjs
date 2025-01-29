@@ -47,6 +47,46 @@ class LineElement extends HTMLElement {
     const shadow = this.attachShadow({ mode: 'open' });
     shadow.append(template.content.cloneNode(true));
   };
+
+  //define the allowed attributes
+  static get observedAttributes() {
+    return ['id', 'wordCount', 'readTime'];
+  }
+  //
+  //sync attributes with properties as you want
+  get id() {
+    return this.getAttribute('id');
+  }
+  set id(value) {
+    this.setAttribute('id', value);
+  }
+
+  get wordCount() {
+    return this.getAttribute('wordCount');
+  }
+  set wordCount(value) {
+    this.setAttribute('wordCount', value);
+  }
+
+  get readTime() {
+    return this.getAttribute('readTime');
+  }
+  set readTime(value) {
+    this.setAttribute('readTime', value);
+  }
+  //
+  //handle values and changes to the attribute
+  attributeChangedCallback(attrName, oldVal, newVal) {
+    if (attrName === 'id') {
+
+    }
+    if (attrName === 'wordCount') {
+
+    }
+    if (attrName === 'readTime') {
+
+    }
+  }
 }
 
 customElements.define('line-element', LineElement);

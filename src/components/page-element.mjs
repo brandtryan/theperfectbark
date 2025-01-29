@@ -31,7 +31,7 @@ template.innerHTML = `
   <div class="line"><slot name="line"></slot></div>
 `;
 
-class PageComponent extends HTMLElement {
+class PageElement extends HTMLElement {
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
@@ -39,7 +39,7 @@ class PageComponent extends HTMLElement {
   };
 }
 
-customElements.define('page-component', PageComponent);
+customElements.define('page-element', PageElement);
 
 
 // // Create function to calculate reading time (* 1.5 for taking in effects)

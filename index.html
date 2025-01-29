@@ -14,7 +14,8 @@
 
   <!-- <link rel="stylesheet" href="src/styles.css" /> -->
   <script src="./src/main.mjs" type="module"></script>
-  <script src="./src/components/page-element.mjs" type="module"></script>
+  <script src="./src/components/line-element.mjs" type="module"></script>
+  <!-- <script src="./src/components/word-element.mjs" type="module"></script> -->
   <style>
     @font-face {
       font-family: Ikarus;
@@ -30,13 +31,32 @@
       box-sizing: border-box;
     }
 
+    body,
+    section,
+    h1,
+    h2,
+    h3,
+    h4,
+    img,
+    picture {
+      max-width: 100%;
+      display: block;
+    }
+
+    input,
+    button,
+    select {
+      font-family: inherit;
+      font-size: inherit;
+    }
+
     html {
       -moz-text-size-adjust: none;
       -webkit-text-size-adjust: none;
       text-size-adjust: none;
       padding: 0;
       background-color: #37383b;
-      color: gold;
+      color: honeydew;
       font-size: 62.5%;
       font-synthesis: none;
       font-feature-settings:
@@ -52,76 +72,28 @@
       font-variation-settings: "ital" 0, "cont" 0;
       font-weight: 400;
       font-stretch: 100%;
-    }
-
-    body,
-    section,
-    h1,
-    h2,
-    h3,
-    h4,
-    p {
-      margin-block-start: 0;
-      margin-block-end: 0;
-      margin-top: 0;
-      margin-right: 0;
-      margin-bottom: 0;
-      margin-left: 0;
-    }
-
-    img,
-    picture {
-      max-width: 100%;
-      display: block;
-    }
-
-    input,
-    button,
-    select {
-      font-family: inherit;
-      font-size: inherit;
-    }
-
-    body {
-      height: 100%;
-      font-family: Ikarus;
-      font-size: clamp(1.6rem, 0.75cqi + 1.24rem, 2.2rem);
-    }
-
-    .page {
-      container: page / size;
+      container: html / size;
       width: 100vw;
-      height: 100vh;
+      height: 100%;
+    }
+
+    .main {
       display: grid;
       place-content: center;
-      border: 2px solid pink;
+      width: 100cqw;
+      height: 100vh;
+      font-family: Ikarus;
+      font-size: clamp(1.6rem, 0.75cqi + 1.24rem, 2.2rem);
     }
   </style>
 </head>
 
 <body>
-  <div class="page">
-    <page-component>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-      <div slot="line">00000000000000000000000000000000000000</div>
-    </page-component>
-  </div>
+  <main class="main">
+    <line-element>
+      <span slot="paragraph">00000000000000000000000000000000000000</span>
+    </line-element>
+  </main>
 
 </body>
 

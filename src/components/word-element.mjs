@@ -1,37 +1,18 @@
+
 const template = document.createElement("template")
 template.innerHTML = `
   <style>
     :host {
-      display: grid;
-      grid-template-columns: auto 38ch auto;
-      grid-template-areas: "left center right";
-      width: 100cqw;
+      display: block;
     }
-    .left {
-      grid-area: left;
-      place-self: left;
-      color: rgba(255, 255, 255, 0.9);
-      border: 2px dotted cornflowerblue;
-    }
-    .line {
-      grid-area: center;
-      place-self: center;
-      white-space: nowrap;
-      overflow: visible;
-      border: 1px solid cornflowerblue;
-    }
-    .right {
-      grid-area: right;
-      place-self: right;
-      color: rgba(255, 255, 255, 0.9);
-      border: 2px dotted cornflowerblue;
-      text-align: right;
+    .word {
+      border: 1px solid orangered;
     }
   </style>
-  <div class="line"><slot name="line"></slot></div>
+  <span class="word"><slot name="word"></span></div>
 `;
 
-class PageElement extends HTMLElement {
+class WordElement extends HTMLElement {
   constructor() {
     super();
     const shadow = this.attachShadow({ mode: 'open' });
@@ -39,7 +20,7 @@ class PageElement extends HTMLElement {
   };
 }
 
-customElements.define('page-element', PageElement);
+customElements.define('word-element', WordElement);
 
 
 // // Create function to calculate reading time (* 1.5 for taking in effects)

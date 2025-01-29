@@ -2,31 +2,43 @@ const template = document.createElement("template")
 template.innerHTML = `
   <style>
     :host {
-      display: block;
+      width: 100cqw;
+      place-content: center;
       grid-template-columns: 1fr 38ch 1fr;
-      grid-template-areas: "left paragraph right";
+      grid-template-areas: "left line right";
       margin: 0;
       padding: 0;
     }
     .left {
       grid-area: left;
-      place-self: left;
       border: 2px dotted cornflowerblue;
     }
-    .paragraph {
-      grid-area: paragraph;
+    .line {
+      grid-area: line;
+      width: 38ch;
       place-self: center;
       white-space: nowrap;
       overflow: visible;
+      margin: 0;
+      padding: 0;
       border: 1px solid lavender;
     }
     .right {
       grid-area: right;
-      place-self: right;
       border: 2px dotted cornflowerblue;
     }
+    p ::slotted(span) {
+      border: 1px dashed orangered;
+    }
   </style>
-  <p class="center"><slot name='paragraph'></slot></p>
+
+  <p class="line">
+  <slot></slot>
+  <span class="word">
+    <slot name="word"></slot>
+  </span>
+  </p>
+
 `;
 
 class LineElement extends HTMLElement {

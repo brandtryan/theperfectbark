@@ -15,7 +15,6 @@
   <!-- <link rel="stylesheet" href="src/styles.css" /> -->
   <script src="./src/main.mjs" type="module"></script>
   <script src="./src/components/line-element.mjs" type="module"></script>
-  <!-- <script src="./src/components/word-element.mjs" type="module"></script> -->
   <style>
     @font-face {
       font-family: Ikarus;
@@ -77,11 +76,12 @@
       height: 100%;
     }
 
-    .main {
+    main {
       display: grid;
       place-content: center;
-      width: 100cqw;
       height: 100vh;
+      max-width: 1280px;
+      min-width: 480px;
       font-family: Ikarus;
       font-size: clamp(1.6rem, 0.75cqi + 1.24rem, 2.2rem);
     }
@@ -89,9 +89,29 @@
 </head>
 
 <body>
-  <main class="main">
+  <main>
     <line-element>
-      <span slot="paragraph">00000000000000000000000000000000000000</span>
+      <span slot="word">My&nbsp;</span>
+      <span slot="word">teachers&nbsp;</span>
+      <span slot="word">look&nbsp;</span>
+      <span slot="word">at&nbsp;</span>
+      <span slot="word">me&nbsp;</span>
+      <span slot="word">funny&nbsp;</span>
+      <span slot="word">when&nbsp;</span>
+      <span slot="word">I&nbsp;</span>
+      <span slot="word">make&nbsp;</span>
+      <span slot="word">weird&nbsp;</span>
+    </line-element>
+    <line-element>
+      <span slot="word">My&nbsp;</span>
+      <span slot="word">teachers&nbsp;</span>
+      <span slot="word">look&nbsp;</span>
+      <span slot="word">at&nbsp;</span>
+      <span slot="word">me&nbsp;</span>
+      <span slot="word">funny&nbsp;</span>
+      <span slot="word">when&nbsp;</span>
+      <span slot="word">I&nbsp;</span>
+      <span slot="word">make&nbsp;</span>
     </line-element>
   </main>
 

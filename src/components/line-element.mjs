@@ -30,6 +30,12 @@ template.innerHTML = `
     p ::slotted(span) {
       border: 1px solid goldenrod;
     }
+    .animated {
+      color: green; 
+    }
+    .notAnimated {
+      color: red; 
+    }
   </style>
 
   <p class="line">
@@ -43,46 +49,91 @@ template.innerHTML = `
 class LineElement extends HTMLElement {
   constructor() {
     super();
-    const shadow = this.attachShadow({ mode: 'open' });
-    shadow.append(template.content.cloneNode(true));
+    this.root = this.attachShadow({ mode: 'open' });
+    // shadowRoot shields the web component from external styling, mostly
+    let clone = template.content.cloneNode(true);
+    this.root.append(clone);
   };
 
   //define the allowed attributes
   static get observedAttributes() {
-    return ['id', 'wordCount', 'readTime'];
+    return ['wordCount', 'readTime', 'animated', 'animation', 'frames', 'timing', 'startTime'];
   }
   //
   //sync attributes with properties as you want
-  get id() {
-    return this.getAttribute('id');
-  }
-  set id(value) {
-    this.setAttribute('id', value);
-  }
-
   get wordCount() {
-    return this.getAttribute('wordCount');
+    return this.getAttribute('word-count');
   }
   set wordCount(value) {
-    this.setAttribute('wordCount', value);
+    this.setAttribute('word-count', value);
   }
 
   get readTime() {
-    return this.getAttribute('readTime');
+    return this.getAttribute('read-time');
   }
   set readTime(value) {
-    this.setAttribute('readTime', value);
+    this.setAttribute('read-time', value);
+  }
+
+  get animated() {
+    return this.getAttribute('animated');
+  }
+  set animated(value) {
+    this.setAttribute('animated', value);
+  }
+
+  get animation() {
+    return this.getAttribute('animation');
+  }
+  set animation(value) {
+    this.setAttribute('animation', value);
+  }
+
+  get frames() {
+    return this.getAttribute('frames');
+  }
+  set frames(value) {
+    this.setAttribute('frames', value);
+  }
+
+  get timing() {
+    return this.getAttribute('timing');
+  }
+  set timing(value) {
+    this.setAttribute('timing', value);
+  }
+
+  get startTime() {
+    return this.getAttribute('start-time');
+  }
+  set startTime(value) {
+    this.setAttribute('start-time', value);
   }
   //
   //handle values and changes to the attribute
   attributeChangedCallback(attrName, oldVal, newVal) {
-    if (attrName === 'id') {
+    if (attrName.toLowerCase() === 'word-count') {
 
     }
-    if (attrName === 'wordCount') {
+    if (attrName.toLowerCase() === 'read-time') {
 
     }
-    if (attrName === 'readTime') {
+    if (attrName.toLowerCase() === 'animated') {
+      const div = this.root.querySelector('.root');
+      let span = div.querySelector('span');
+      if (span.animated = "true") (span) => span.classList('.animated')
+      span.classList('.notAnimated')
+    }
+    if (attrName.toLowerCase() === 'animation') {
+
+    }
+    if (attrName.toLowerCase() === 'frames') {
+
+    }
+    if (attrName.toLowerCase() === 'timing') {
+
+    }
+    if (attrName.toLowerCase() === 'start-time') {
 
     }
   }

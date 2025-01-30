@@ -20,15 +20,15 @@ template.innerHTML = `
       white-space: nowrap;
       overflow: visible;
       margin: 0;
-      padding: 0;
-      border: 1px solid lavender;
+      padding: 3px;
+      border: 2px solid cornflowerblue;
     }
     .right {
       grid-area: right;
       border: 2px dotted cornflowerblue;
     }
     p ::slotted(span) {
-      border: 1px dashed orangered;
+      border: 1px solid goldenrod;
     }
   </style>
 
@@ -38,7 +38,6 @@ template.innerHTML = `
     <slot name="word"></slot>
   </span>
   </p>
-
 `;
 
 class LineElement extends HTMLElement {

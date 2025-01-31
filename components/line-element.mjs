@@ -1,4 +1,4 @@
-import { wordCounts, readTimes } from "../modules/wordCounts.mjs";
+import { words, wordCounts, readTimes } from "../modules/wordCounts.mjs";
 
 const template = document.createElement("template")
 template.innerHTML = `
@@ -85,7 +85,14 @@ class LineElement extends HTMLElement {
   //handle values and changes to the attribute
   attributeChangedCallback(attrName, oldVal, newVal) {
     if (attrName === 'wordCount') {
+      const div = this.shadowRoot;
+      const wc = this.wordCount;
 
+      for (let i = 0; i < wc; i++) {
+        let w = div.querySelector('word-element') ? div.querySelector('word-element') : document.createElement('word-element');
+        w.textContent = words[0];
+        div.append(w);
+      }
     }
     if (attrName === 'readTime') {
 

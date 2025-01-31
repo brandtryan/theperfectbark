@@ -1,519 +1,449 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>The Perfect Bark</title>
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
-
-  <!-- <link rel="stylesheet" href="src/styles.css" /> -->
-  <script src="./src/main.mjs" type="module"></script>
-  <script src="./src/components/line-element.mjs" type="module"></script>
-  <style>
-    @font-face {
-      font-family: Ikarus;
-      src: url("./src/Ikarus.woff2") format("woff2-variations");
-      font-style: normal;
-      font-display: swap;
-      unicode-range: U+00-7F, U+2014;
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-    }
-
-    body,
-    section,
-    h1,
-    h2,
-    h3,
-    h4,
-    img,
-    picture {
-      max-width: 100%;
-      display: block;
-    }
-
-    input,
-    button,
-    select {
-      font-family: inherit;
-      font-size: inherit;
-    }
-
-    html {
-      -moz-text-size-adjust: none;
-      -webkit-text-size-adjust: none;
-      text-size-adjust: none;
-      padding: 0;
-      background-color: #37383b;
-      color: honeydew;
-      font-size: 62.5%;
-      font-synthesis: none;
-      font-feature-settings:
-        "case" 1,
-        "liga" 1,
-        "ss02" 1,
-        "ss03" 1,
-        "ss04" 1,
-        "ss11" 1,
-        "ss13" 1,
-        "ss17" 1,
-        "ss18" 1;
-      font-variation-settings: "ital" 0, "cont" 0;
-      font-weight: 400;
-      font-stretch: 100%;
-    }
-
-    main {
-      container: html / size;
-      width: 100vw;
-      height: 100%;
-    }
-
-    section {
-      display: grid;
-      place-content: center;
-      height: 100vh;
-      max-width: 1280px;
-      min-width: 480px;
-      font-family: Ikarus;
-      font-size: clamp(1.6rem, 0.75cqi + 1.24rem, 2.2rem);
-    }
-  </style>
+  <link rel="preload" href="./Ikarus.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  <link rel="stylesheet" href="./reset.css" />
+  <link rel="stylesheet" href="./styles.css" />
+  <script src="./components/line-element.mjs" type="module"></script>
+  <script src="./components/word-element.mjs" type="module"></script>
+  <script src="./main.mjs" type="module"></script>
 </head>
 
 <body>
   <main>
-    <section id='s00' data-animated="false" data-animation="tremble" data-frames="" data-timing="" data-start-time="">
-      <line-element id="s00l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l00w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l01w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l02w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l03w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l04w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l05w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l06w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l07w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l08w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l09w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+    <section id='s00' animated="false" frames="" timing="" startTime="">
+      <line-element id="s00l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l00w00" animated="false" frames="" timing="" startTime="">of&nbsp;</word-element>
+        <word-element id="s00l01w01" animated="false" frames="" timing="" startTime="">nowhere&nbsp;</word-element>
+        <word-element id="s00l02w02" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l03w03" animated="false" frames="" timing="" startTime="">let&nbsp;</word-element>
+        <word-element id="s00l04w04" animated="false" frames="" timing="" startTime="">out&nbsp;</word-element>
+        <word-element id="s00l05w05" animated="false" frames="" timing="" startTime="">a&nbsp;</word-element>
+        <word-element id="s00l06w06" animated="false" frames="" timing="" startTime="">bark,&nbsp;</word-element>
+        <word-element id="s00l07w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l08w08" animated="false" frames="" timing="" startTime="">mean&nbsp;</word-element>
+        <word-element id="s00l09w09" animated="false" frames="" timing="" startTime="">a&nbsp;</word-element>
+        <word-element id="s00l09w10" animated="false" frames="" timing="" startTime="">loud&nbsp;</word-element>
+        <word-element id="s00l09w11" animated="false" frames="" timing="" startTime="">bark,&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l01" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l01w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l01w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l01w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l01w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l01w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l01w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l01w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l01w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l01w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l01w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l01" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l01w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l01w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l01w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l01w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l01w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l01w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l01w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l01w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l01w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l01w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l02" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l02w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l02w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l02w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l02w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l02w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l02w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l02w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l02w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l02w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l02w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l02" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l02w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l02w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l02w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l02w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l02w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l02w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l02w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l02w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l02w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l02w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l03" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l03w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l03w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l03w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l03w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l03w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l03w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l03w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l03w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l03w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l03w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l03" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l03w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l03w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l03w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l03w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l03w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l03w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l03w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l03w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l03w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l03w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l04" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l04w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l04w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l04w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l04w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l04w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l04w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l04w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l04w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l04w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l04w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l04" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l04w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l04w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l04w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l04w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l04w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l04w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l04w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l04w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l04w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l04w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l05" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l05w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l05w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l05w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l05w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l05w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l05w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l05w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l05w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l05w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l05w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l05" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l05w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l05w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l05w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l05w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l05w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l05w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l05w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l05w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l05w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l05w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l06" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l06w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l06w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l06w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l06w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l06w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l06w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l06w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l06w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l06w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l06w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l06" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l06w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l06w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l06w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l06w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l06w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l06w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l06w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l06w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l06w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l06w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l07" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l07w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l07w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l07w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l07w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l07w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l07w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l07w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l07w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l07w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l07w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l07" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l07w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l07w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l07w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l07w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l07w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l07w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l07w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l07w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l07w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l07w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l08" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l08w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l08w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l08w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l08w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l08w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l08w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l08w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l08w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l08w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l08w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l08" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l08w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l08w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l08w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l08w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l08w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l08w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l08w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l08w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l08w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l08w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l09" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l09w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l09w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l09w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l09w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l09w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l09w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l09w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l09w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l09w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l09w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l09" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l09w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l09w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l09w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l09w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l09w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l09w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l09w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l09w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l09w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l09w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l10" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l10w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l10w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l10w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l10w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l10w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l10w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l10w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l10w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l10w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l10w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l10" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l10w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l10w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l10w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l10w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l10w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l10w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l10w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l10w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l10w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l10w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l11" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l11w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l11w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l11w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l11w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l11w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l11w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l11w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l11w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l11w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l11w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l11" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l11w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l11w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l11w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l11w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l11w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l11w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l11w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l11w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l11w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l11w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l12" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l12w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l12w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l12w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l12w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l12w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l12w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l12w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l12w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l12w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l12w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l12" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l12w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l12w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l12w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l12w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l12w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l12w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l12w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l12w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l12w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l12w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element i1="s00l13" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l13w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l13w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l13w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l13w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l13w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l13w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l13w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l13w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l13w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l13w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element i1="s00l13" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l13w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l13w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l13w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l13w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l13w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l13w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l13w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l13w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l13w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l13w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l14" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l14w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l14w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l14w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l14w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l14w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l14w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l14w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l14w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l14w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l14w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l14" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l14w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l14w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l14w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l14w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l14w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l14w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l14w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l14w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l14w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l14w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l15" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l15w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l15w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l15w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l15w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l15w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l15w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l15w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l15w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l15w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l15w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l15" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l15w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l15w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l15w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l15w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l15w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l15w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l15w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l15w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l15w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l15w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l16" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l16w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l16w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l16w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l16w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l16w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l16w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l16w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l16w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l16w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l16w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l16" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l16w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l16w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l16w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l16w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l16w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l16w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l16w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l16w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l16w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l16w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s00l17" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s00l17" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
     </section>
-    <section id='s01' data-animated="false" data-animation="tremble" data-frames="" data-timing="" data-start-time="">
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+    <section id='s01' animated="false" frames="" timing="" startTime="">
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
-      <line-element id="s01l00" data-word-count="10" data-read-time="3000" data-animated="false" data-animation="bark" data-frames="" data-timing="" data-start-time="">
-        <span slot="word" id="s00l17w00" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">My&nbsp;</span>
-        <span slot="word" id="s00l17w01" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">teachers&nbsp;</span>
-        <span slot="word" id="s00l17w02" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">look&nbsp;</span>
-        <span slot="word" id="s00l17w03" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">at&nbsp;</span>
-        <span slot="word" id="s00l17w04" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">me&nbsp;</span>
-        <span slot="word" id="s00l17w05" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">funny&nbsp;</span>
-        <span slot="word" id="s00l17w06" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">when&nbsp;</span>
-        <span slot="word" id="s00l17w07" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">I&nbsp;</span>
-        <span slot="word" id="s00l17w08" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">make&nbsp;</span>
-        <span slot="word" id="s00l17w09" data-animated="false" data-animation="breath" data-frames="" data-timing="" data-start-time="">weird&nbsp;</span>
+      <line-element id="s01l00" wordCount="10" readTime="3000" animated="false" frames="" timing="" startTime="">
+        <word-element id="s00l17w00" animated="false" frames="" timing="" startTime="">My&nbsp;</word-element>
+        <word-element id="s00l17w01" animated="false" frames="" timing="" startTime="">teachers&nbsp;</word-element>
+        <word-element id="s00l17w02" animated="false" frames="" timing="" startTime="">look&nbsp;</word-element>
+        <word-element id="s00l17w03" animated="false" frames="" timing="" startTime="">at&nbsp;</word-element>
+        <word-element id="s00l17w04" animated="false" frames="" timing="" startTime="">me&nbsp;</word-element>
+        <word-element id="s00l17w05" animated="false" frames="" timing="" startTime="">funny&nbsp;</word-element>
+        <word-element id="s00l17w06" animated="false" frames="" timing="" startTime="">when&nbsp;</word-element>
+        <word-element id="s00l17w07" animated="false" frames="" timing="" startTime="">I&nbsp;</word-element>
+        <word-element id="s00l17w08" animated="false" frames="" timing="" startTime="">make&nbsp;</word-element>
+        <word-element id="s00l17w09" animated="false" frames="" timing="" startTime="">weird&nbsp;</word-element>
       </line-element>
     </section>
   </main>

@@ -420,3 +420,26 @@ export const linesArray = [
   `neighborhood, I can let out one last, perfect`,
   `bark, and that maybe that'll be the end of it.`,
 ];
+
+function splitArray(arr) {
+  const result = [];
+  let currentSubarray = [];
+
+  for (const item of arr) {
+    if (item === '<br>') {
+      result.push(currentSubarray);
+      currentSubarray = [];
+    } else {
+      currentSubarray.push(item);
+    }
+  }
+
+  if (currentSubarray.length > 0) {
+    result.push(currentSubarray);
+  }
+
+  return result;
+}
+
+export const subArrays = splitArray(linesArray);
+

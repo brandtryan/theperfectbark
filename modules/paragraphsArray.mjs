@@ -1,4 +1,4 @@
-export const linesArray = [
+export const allParagraphsArray = [[
   `My teachers look at me funny when I make weird`,
   `noises, but my friends, they usually just laugh.`,
   `It's funny to them, and they are pretty cool`,
@@ -10,8 +10,8 @@ export const linesArray = [
   `and then someone starts laughing, and then`,
   `everyone else gets going. To tell you the truth,`,
   `it doesn't bother meat all, and I laugh right`,
-  `along with them most of the time.`,
-  `<br>`,
+  `along with them most of the time.`
+], [
   `I go to this school where our teachers are`,
   `mostly nuns—we have to go to church every week,`,
   `and sometimesI'll bark in church too. This one`,
@@ -32,8 +32,8 @@ export const linesArray = [
   `after telling me all about how Jesus didn't`,
   `appreciate me disrupting His Mass, she smacked`,
   `me in the back of the head, and told me maybe`,
-  `that will stop me from shaking it.`,
-  `<br>`,
+  `that will stop me from shaking it.`
+], [
   `I figured though, that Jesus didn't mind so much`,
   `—since I prayed to Him all the time to help me`,
   `to stop shaking my head, and barking, though it`,
@@ -49,8 +49,8 @@ export const linesArray = [
   `wrong with me anyway, especially after this one`,
   `time when I called my basketball coach an`,
   `asshole right to his face for taking me outta'`,
-  `the game.`,
-  `<br>`,
+  `the game.`
+], [
   `The thing is, I couldn't help it—it just sorta'`,
   `came out of me. I used to go over to my friend`,
   `Justin's house all the time—but his dad was the`,
@@ -61,15 +61,15 @@ export const linesArray = [
   `That's my dad, man'—and I feel real bad and all,`,
   `but like I said, I couldn't help it. Anyway, I still`,
   `still think he shouldn't have taken me outta'`,
-  `the game.`,
-  `<br>`,
+  `the game.`
+], [
   `My mom's taking me to the hospital today to see`,
   `if something's wrong with me. I do other weird`,
   `stuff too—like stomping my feet, and grunting,`,
   `and making my face all screwed up. Sometimes I`,
   `get real tired of it, and really want to stop,`,
-  `but it's like I can't.`,
-  `<br>`,
+  `but it's like I can't.`
+], [
   `At first it was all a big joke—because there was`,
   `this one guy at the swimming pool—Crazy Charlie—`,
   `who would bark right before he dove off the high`,
@@ -89,8 +89,8 @@ export const linesArray = [
   `barking and twitching, and yelling out "Crazy`,
   `Charlie!" 'cause a lot of times, Crazy Charlie`,
   `himself would do that while he was walking from`,
-  `the showers to the diving tank.`,
-  `<br>`,
+  `the showers to the diving tank.`
+], [
   `Rivi is the name of the pool we all go to, and I`,
   `spend most of my summers there, except when I'm`,
   `at camp. It's like five pools all in one, 'cause`,
@@ -104,8 +104,8 @@ export const linesArray = [
   `the girls hang out 'cause there's a bar there`,
   `where they can do somersaults and stuff—and`,
   `finally a baby and toddler pool which, rumor has`,
-  `it, is two parts water, and one part urine.`,
-  `<br>`,
+  `it, is two parts water, and one part urine.`
+], [
   `Anyway, it was Crazy Charlie that got me goin'`,
   `makin' all these weird noises—'cause before that`,
   `I never did anything. I started makin' fun of`,
@@ -115,8 +115,8 @@ export const linesArray = [
   `thing I could do was bark right back, and when I`,
   `did, my friends all laughed real hard and patted`,
   `me on the back like it was a real good one or`,
-  `somethin'.`,
-  `<br>`,
+  `somethin'.`
+], [
   `The thing that I remember though, is when Crazy`,
   `Charlie was lookin' at me—it was like he musta'`,
   `been thinking of how either he hoped we all got`,
@@ -131,8 +131,8 @@ export const linesArray = [
   `me. It wasn't like an adult look—it was the look`,
   `some kid gives you after you've made fun of him,`,
   `like he really hates you, and would like to kill`,
-  `you right there on the spot.`,
-  `<br>`,
+  `you right there on the spot.`
+], [
   `In the bullpen there's this big guy that likes`,
   `to launch me into the air like a missile. That's`,
   `what they call me and my friends, missiles,`,
@@ -157,8 +157,8 @@ export const linesArray = [
   `out for a perfect dive into the water. I'm`,
   `thinking I'll tell this to that doctor I'm`,
   `gonna' see today, since that is practically the`,
-  `only time that I don't do it.`,
-  `<br>`,
+  `only time that I don't do it.`
+], [
   `On the way to Riley Hospital my mom keeps`,
   `tellin' me that it's not a psychiatrist that I'm`,
   `gonna' see—but that it's a neurologist, whatever`,
@@ -178,8 +178,8 @@ export const linesArray = [
   `talk to themselves and look like they're about`,
   `to kill somebody or somethin'. Those guys are`,
   `creeps, and I try to keep clear of them whenever`,
-  `me and my mom go downtown to the post office.`,
-  `<br>`,
+  `me and my mom go downtown to the post office.`
+], [
   `When we get to the hospital I have to sit in`,
   `this waiting room that is made for little kids—`,
   `there is a box of toys and a pile of children's`,
@@ -197,16 +197,16 @@ export const linesArray = [
   `my mom's crying—I don't even have to know what`,
   `it's about—I start in right along with her, and`,
   `ask her why she has to bawl when she knows it`,
-  `makes me sad.`,
-  `<br>`,
+  `makes me sad.`
+], [
   `So anyway, I'm not a cry baby or anything—it's`,
   `just that one thing that does it to me every`,
   `time. So I'm thinking I'll hold in the urges to`,
   `bark and twitch for at least a few minutes while`,
   `the doctor's seein' me. That way he won't think`,
   `I have it, and my mom won't have anything to get`,
-  `all worked up about.`,
-  `<br>`,
+  `all worked up about.`
+], [
   `But in the waiting room I'm really going at it`,
   `since the doctor's nowhere in sight—I pick up`,
   `this book I remember having when I was a kid,`,
@@ -221,8 +221,8 @@ export const linesArray = [
   `through the carpet and into the floor`,
   `underneath. I'm grunting every other second,`,
   `louder each time, and can't seem to get it`,
-  `right.`,
-  `<br>`,
+  `right.`
+], [
   `That's the thing about it—it's like once you`,
   `start in on it, you've got to get it right.`,
   `Just like Crazy Charlie and his Olympic dives—if`,
@@ -234,14 +234,14 @@ export const linesArray = [
   `didn't hear that one either, and so on until the`,
   `whole class is staring at me, and I'm yanked`,
   `outta' the class by Sister Agatha and sent to`,
-  `the principal's office.`,
-  `<br>`,
+  `the principal's office.`
+], [
   `I don't really wanna' look up at my mom now,`,
   `'cause I'm really having a fit, but when I do,`,
   `she is just staring at me like she usually does,`,
   `smiling, like what I'm doing is the most normal`,
-  `thing in the world.`,
-  `<br>`,
+  `thing in the world.`
+], [
   `Luckily there's no one else in the room—I mean,`,
   `if there was a little kid in the room I'd really`,
   `be feelin' stupid—'cause sometimes little kids`,
@@ -259,8 +259,8 @@ export const linesArray = [
   `that I have anything against retards, but it's`,
   `like I'm not retarded—I just twitch and stuff,`,
   `which isn't the same thing at all. Just like`,
-  `Crazy Charlie really isn't crazy.`,
-  `<br>`,
+  `Crazy Charlie really isn't crazy.`
+], [
   `The doctor asks me to follow him down the hall`,
   `to his office where we can talk, and I'm waiting`,
   `for my mom to come with us, but she stays`,
@@ -273,40 +273,40 @@ export const linesArray = [
   `thinking this is what it would feel like if I`,
   `was. I'm sweating by the time we make it to his`,
   `office, which is like ten miles down the hall,`,
-  `and he asks me again if everything's all right.`,
-  `<br>`,
-  `"I'm fine," I say.`,
-  `<br>`,
+  `and he asks me again if everything's all right.`
+], [
+  `"I'm fine," I say.`
+], [
   `"And are you holding back on anything? Is this`,
-  `how you usually act?" he asks.`,
-  `<br>`,
-  `"Yes."`,
-  `<br>`,
+  `how you usually act?" he asks.`
+], [
+  `"Yes."`
+], [
   `"Are you feeling the urge to make noises, or`,
-  `shake your head?"`,
-  `<br>`,
-  `"No."`,
-  `<br>`,
-  `"Anything like that?"`,
-  `<br>`,
+  `shake your head?"`
+], [
+  `"No."`
+], [
+  `"Anything like that?"`
+], [
   `"No." Only inside I'm fighting the itches like a`,
-  `madman, and think maybe I'm not going to make it.`,
-  `<br>`,
+  `madman, and think maybe I'm not going to make it.`
+], [
   `"It's just sorta' hot in here, that's all," I`,
-  `say, 'cause I'm thinking he can see me sweating.`,
-  `<br>`,
+  `say, 'cause I'm thinking he can see me sweating.`
+], [
   `He says then that that's all he wanted to know`,
   `and takes me back to my mom. They are talking`,
   `right there in front of me, and right when I`,
   `think he's gonna' let us go, he asks me to go`,
   `down to the drinking fountain to get a sip of`,
-  `water.`,
-  `<br>`,
-  `"I'm not thirsty," I tell him.`,
-  `<br>`,
+  `water.`
+], [
+  `"I'm not thirsty," I tell him.`
+], [
   `"Go on anyway, I have to talk to your mother for`,
-  `a minute," he says.`,
-  `<br>`,
+  `a minute," he says.`
+], [
   `And I'm thinking, yeah, like this isn't a test.`,
   `This guy is trying to make me do something, but`,
   `it's like the urges are starting to calm down a`,
@@ -315,14 +315,14 @@ export const linesArray = [
   `doctor on my back watching me like a hawk.`,
   `When I return without making a single jerk, I'm`,
   `smiling like I'm in on his secret test, and he`,
-  `tells me I can go home now.`,
-  `<br>`,
+  `tells me I can go home now.`
+], [
   `Right when we walk out the front door to the`,
   `hospital, I let out a nice big bark, and snap my`,
   `head right over to my mom to see if she heard`,
   `it, but she doesn't look at me and keeps on`,
-  `goin' like nothing happened.`,
-  `<br>`,
+  `goin' like nothing happened.`
+], [
   `On the way home I ask her if I have the barks,`,
   `and what the doctor had said about me. She tells`,
   `me that I do have them and that we're goin' to`,
@@ -332,20 +332,20 @@ export const linesArray = [
   `I knew about the test, and that I hadn't done`,
   `anything at all. Then she starts to cry, tears`,
   `running down to the corners of her mouth, and`,
-  `she starts rubbing the back of my neck.`,
-  `<br>`,
+  `she starts rubbing the back of my neck.`
+], [
   `"The waiting room, Chris," she says, "he was`,
-  `watching you in the waiting room."`,
-  `<br>`,
-  `And I'm thinking that was a dirty trick.`,
-  `<br>`,
+  `watching you in the waiting room."`
+], [
+  `And I'm thinking that was a dirty trick.`
+], [
   `I end up taking this expensive medicine for a`,
   `week, but all it does is make me sleep almost`,
   `all day in school, and my mom says that's not`,
   `going to work, and I'm sorta happy, because`,
   `sleeping all day is not the sort of thing that I`,
-  `like doin' on a regular basis.`,
-  `<br>`,
+  `like doin' on a regular basis.`
+], [
   `Tonight we're supposed to have a conference at`,
   `school, and when me and my mom get there, all`,
   `the teachers are there at this big table, and`,
@@ -366,8 +366,8 @@ export const linesArray = [
   `mom said that it wasn't something to be proud`,
   `of, and that it wasn't like something I could`,
   `put on my resume, whatever the hell that's`,
-  `supposed to mean.`,
-  `<br>`,
+  `supposed to mean.`
+], [
   `I'm still sort of embarrassed about having a`,
   `disease and all that, and tell them that I don't`,
   `know what they're talking about—that I didn't`,
@@ -396,27 +396,35 @@ export const linesArray = [
   `getting up out of their seats. I finish it off`,
   `like a real pro and start shaking all over like`,
   `I've never shaked before, and end up falling`,
-  `right outta' my chair.`,
-  `<br>`,
+  `right outta' my chair.`
+], [
   `They're all looking at me like I've just been`,
   `hit by a car or somethin', like this one time at`,
   `school when this little girl got run over by a`,
   `car at recess, and people came out of their`,
   `houses and just stood there staring, wondering`,
   `if the world was going to come to an end or`,
-  `something.`,
-  `<br>`,
+  `something.`
+], [
   `I mean, I kinda' feel sorry for them—'cause I`,
   `know it's not like they're enjoying watch me`,
   `have a fit. Even Sister Agatha looks like maybe`,
   `she's not having a good time, and has lost that`,
   `evil look that she usually gives me when I turn`,
-  `around in church to see if she's spyin' on me.`,
-  `<br>`,
+  `around in church to see if she's spyin' on me.`
+], [
   `Me, I'm just wishing my mom would stop crying,`,
   `and that I could be back in the bullpen with Abe`,
   `so he could launch me nice and high—and then,`,
   `right when I get that great view of the`,
   `neighborhood, I can let out one last, perfect`,
-  `bark, and that maybe that'll be the end of it.`,
-];
+  `bark, and that maybe that'll be the end of it.`
+]];
+
+
+function flattenArray(arr) {
+  return arr.flat();
+}
+
+export const allLinesArray = flattenArray(allParagraphsArray)
+

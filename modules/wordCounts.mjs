@@ -34,7 +34,6 @@ for (const line of paragraphLines) {
 }
 console.log(`p00l00 words: ${lineWords[0]}`);                // p00l00 words
 console.log(`p00l00 word count: ${lineWordCounts[0]}`);         // p00l00 wordCount
-// console.log(`p00l00 word count: ${wordCounts[0]}`);         // p00l00 wordCount
 
 // line reading times
 export const lineReadingTimes = [];
@@ -44,5 +43,3 @@ for (let i = 0; i < lineWords.length; i++) {
   lineReadingTimes.push((Math.round(time * 100) / 100) * 1000);
 }
 console.log(`p00l00 read time: ${lineReadingTimes[0]}`);                // p00l00 readTime
-
-

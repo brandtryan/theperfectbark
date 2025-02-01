@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
   console.log('Main.js and the DOM are loaded');
 });
 
-console.log(words);
+console.table(words);
 
 console.table(wordCounts);
 
 
 //
 //get lines
-document.querySelector('line-element').setAttribute('wordCount', wordCounts[0]);
+// document.querySelector('line-element').setAttribute('wordCount', wordCounts[0]);
 
 

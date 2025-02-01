@@ -1,24 +1,7 @@
-import { words, wordCounts, readTimes } from "../modules/wordCounts.mjs";
+import { lineWords, lineWordCounts, lineReadingTimes } from "../modules/wordCounts.mjs";
 
 const template = document.createElement("template")
 template.innerHTML = `
-  <style>
-    :host {
-      place-content: center;
-      grid-template-columns: 38ch;
-      margin: 0;
-      padding: 0;
-    }
-    p {
-      width: 38ch;
-      place-self: center;
-      white-space: nowrap;
-      overflow: visible;
-      padding: 0;
-      margin: 0;
-    }
-  </style>
-
   <p>
   <slot></slot>
   </p>
@@ -36,8 +19,10 @@ class LineElement extends HTMLElement {
   static get observedAttributes() {
     return ['wordCount', 'readTime', 'animated', 'frames', 'timing', 'startTime'];
   }
+
   //
-  //sync attributes with properties as you want
+  //create properties to match attributes
+  //so either get/setAttribute or property names work
   get wordCount() {
     return this.getAttribute('wordCount');
   }
@@ -45,46 +30,51 @@ class LineElement extends HTMLElement {
     this.setAttribute('wordCount', value);
   }
 
-  get readTime() {
-    return this.getAttribute('readTime');
-  }
-  set readTime(value) {
-    this.setAttribute('readTime', value);
-  }
+  // get readTime() {
+  //   return this.getAttribute('readTime');
+  // }
+  // set readTime(value) {
+  //   this.setAttribute('readTime', value);
+  // }
 
-  get animated() {
-    return this.getAttribute('animated');
-  }
-  set animated(value) {
-    this.setAttribute('animated', value);
-  }
+  // get animated() {
+  //   return this.getAttribute('animated');
+  // }
+  // set animated(value) {
+  //   this.setAttribute('animated', value);
+  // }
 
-  get frames() {
-    return this.getAttribute('frames');
-  }
-  set frames(value) {
-    this.setAttribute('frames', value);
-  }
+  // get frames() {
+  //   return this.getAttribute('frames');
+  // }
+  // set frames(value) {
+  //   this.setAttribute('frames', value);
+  // }
 
-  get timing() {
-    return this.getAttribute('timing');
-  }
-  set timing(value) {
-    this.setAttribute('timing', value);
-  }
+  // get timing() {
+  //   return this.getAttribute('timing');
+  // }
+  // set timing(value) {
+  //   this.setAttribute('timing', value);
+  // }
 
-  get startTime() {
-    return this.getAttribute('startTime');
-  }
-  set startTime(value) {
-    this.setAttribute('startTime', value);
-  }
+  // get startTime() {
+  //   return this.getAttribute('startTime');
+  // }
+  // set startTime(value) {
+  //   this.setAttribute('startTime', value);
+  // }
 
 
   //
   //handle values and changes to the attribute
+  // This method will run everytime attribute changes, including on page load
+  // that means when I provide a value for an attribute in main.js or directly in html
+  // attrName, oldVal, newVal always get passed in as arguments (don't have to use them all)
+
   attributeChangedCallback(attrName, oldVal, newVal) {
     if (attrName === 'wordCount') {
+      // do something
       const div = this.shadowRoot;
       const wc = this.wordCount;
 

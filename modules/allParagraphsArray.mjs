@@ -421,10 +421,10 @@ export const allParagraphsArray = [[
   `bark, and that maybe that'll be the end of it.`
 ]];
 
+// Slice to create individual paragraph line references
+const paragraph00 = allParagraphsArray[0];
+console.log(paragraph00.length);
 
-function flattenArray(arr) {
-  return arr.flat();
+for (let para of allParagraphsArray) {
+
 }
-
-export const allLinesArray = flattenArray(allParagraphsArray)
-

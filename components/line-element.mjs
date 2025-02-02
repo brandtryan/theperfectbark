@@ -2,6 +2,12 @@ import { lineWords, lineWordCounts, lineReadingTimes } from "../modules/wordCoun
 
 const template = document.createElement("template")
 template.innerHTML = `
+<style>
+  p {
+  /* border: 1px solid red; */
+  margin: 0;
+  }
+</style>
   <p>
   <slot></slot>
   </p>

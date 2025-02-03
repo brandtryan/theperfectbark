@@ -1,5 +1,3 @@
-import { lineWords, lineWordCounts, lineReadingTimes } from "../modules/wordCounts.mjs";
-
 const template = document.createElement("template")
 template.innerHTML = `
   <style>

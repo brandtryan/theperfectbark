@@ -22,19 +22,12 @@ class LineElement extends HTMLElement {
 
   //define the allowed attributes
   static get observedAttributes() {
-    return ['animation', 'duration', 'timeline', 'start'];
+    return ['duration', 'keyframes', 'timing', 'start'];
   }
 
   //
   //create properties to match attributes
   //so either get/setAttribute or property names work
-
-  get animation() {
-    return this.getAttribute('animation');
-  }
-  set animation(value) {
-    this.setAttribute('animation', value);
-  }
 
   get duration() {
     return this.getAttribute('duration');
@@ -43,11 +36,18 @@ class LineElement extends HTMLElement {
     this.setAttribute('duration', value);
   }
 
-  get timeline() {
-    return this.getAttribute('timeline');
+  get keyframes() {
+    return this.getAttribute('keyframes');
   }
-  set timeline(value) {
-    this.setAttribute('timeline', value);
+  set keyframes(value) {
+    this.setAttribute('keyframes', value);
+  }
+
+  get timing() {
+    return this.getAttribute('timing');
+  }
+  set timing(value) {
+    this.setAttribute('timing', value);
   }
 
   get start() {
@@ -65,19 +65,17 @@ class LineElement extends HTMLElement {
   // attrName, oldVal, newVal always get passed in as arguments (don't have to use them all)
 
   attributeChangedCallback(attrName, oldVal, newVal) {
-    if (attrName === 'animation') {
-      // do something
-      const div = this.shadowRoot;
-      const anima = this.animation;
-    }
     if (attrName === 'duration') {
-
+      // do something
     }
-    if (attrName === 'timeline') {
-
+    if (attrName === 'keyframes') {
+      // do something
+    }
+    if (attrName === 'timing') {
+      // do something
     }
     if (attrName === 'start') {
-
+      // do something
     }
   }
 }

@@ -23,9 +23,3 @@ function hello(ev) {
   console.log(ev);
   console.log('hello from a local function');
 }
-
-function goodbye() {
-  console.log('goodbye from a local function');
-  let le = document.querySelector('line-element');
-  le.remove();
-}

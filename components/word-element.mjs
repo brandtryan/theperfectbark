@@ -71,7 +71,7 @@ class WordElement extends HTMLElement {
     console.log(`Word Component with id: ${wordId} connected with animation: ${animationType}
       with a delay of ${delay} and a duration of ${duration}`);
     // setup styles and element based on the id or animation attributes
-    this.applyAnimation(breath);
+    // this.applyAnimation(breath);
   }
 
   //
@@ -100,7 +100,7 @@ class WordElement extends HTMLElement {
     if (animationType === 'breath') {
       console.log('Applying breath animation');
       //implementation
-      Element.animate();
+      Element.animate(breath);
 
     } else if (animationType === 'twitch') {
       console.log('Applying twitch animation');

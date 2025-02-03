@@ -1,71 +1,86 @@
 // word-element.mjs
-
+const template = document.createElement("template")
+template.innerHTML = `
+      <style>
+        span {
+        /* border: 1px solid blue; */
+          margin: 0;
+          padding: 0;
+        }
+      </style>
+      <span>
+        <slot></slot>
+      </span>
+`;
 class WordElement extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
-    this.render();
-  }
-
-  render() {
-    this.shadowRoot.innerHTML = `
-      <span>
-        <slot></slot>
-      </span>
-    `;
+    let clone = template.content.cloneNode(true);
+    this.shadowRoot.append(clone);
   }
 
   //define the allowed attributes
   static get observedAttributes() {
-    return ['animated', 'frames', 'timing', 'startTime'];
+    return ['animation', 'duration', 'timeline', 'start'];
   }
+
   //
-  //sync attributes with properties as you want
-  get animated() {
-    return this.getAttribute('animated');
+  //create properties to match attributes
+  //so either get/setAttribute or property names work
+
+  get animation() {
+    return this.getAttribute('animation');
   }
-  set animated(value) {
-    this.setAttribute('animated', value);
+  set animation(value) {
+    this.setAttribute('animation', value);
   }
 
-  get frames() {
-    return this.getAttribute('frames');
+  get duration() {
+    return this.getAttribute('duration');
   }
-  set frames(value) {
-    this.setAttribute('frames', value);
-  }
-
-  get timing() {
-    return this.getAttribute('timing');
-  }
-  set timing(value) {
-    this.setAttribute('timing', value);
+  set duration(value) {
+    this.setAttribute('duration', value);
   }
 
-  get startTime() {
-    return this.getAttribute('startTime');
+  get timeline() {
+    return this.getAttribute('timeline');
   }
-  set startTime(value) {
-    this.setAttribute('startTime', value);
+  set timeline(value) {
+    this.setAttribute('timeline', value);
   }
+
+  get start() {
+    return this.getAttribute('start');
+  }
+  set start(value) {
+    this.setAttribute('start', value);
+  }
+
 
   //
   //handle values and changes to the attribute
+  // This method will run everytime attribute changes, including on page load
+  // that means when I provide a value for an attribute in main.js or directly in html
+  // attrName, oldVal, newVal always get passed in as arguments (don't have to use them all)
+
   attributeChangedCallback(attrName, oldVal, newVal) {
-    if (attrName === 'animated') {
+    if (attrName === 'animation') {
+      // do something
+      const div = this.shadowRoot;
+      const anima = this.animation;
+    }
+    if (attrName === 'duration') {
 
     }
-    if (attrName === 'frames') {
+    if (attrName === 'timeline') {
 
     }
-    if (attrName === 'timing') {
-
-    }
-    if (attrName === 'startTime') {
+    if (attrName === 'start') {
 
     }
   }
-
 }
+
 
 customElements.define('word-element', WordElement);

@@ -1,30 +1,39 @@
-// word-element.mjs
 import { breath } from '../modules/animations.mjs'
 
 
 const template = document.createElement("template")
 template.innerHTML = `
       <style>
-        span {
+        :host {
+          display: block; 
+        }
+        p {
         /* border: 1px solid blue; */
-          margin: 0;
-          padding: 0;
+            display: block;
+            margin: 0;
+            padding: 0;
         }
       </style>
-      <div>
-          <span><slot name="0"></slot></span>
-          <span><slot name="1"></slot></span>
-          <span><slot name="2"></slot></span>
-          <span><slot name="3"></slot></span>
-          <span><slot name="4"></slot></span>
-          <span><slot name="5"></slot></span>
-          <span><slot name="6"></slot></span>
-          <span><slot name="7"></slot></span>
-          <span><slot name="8"></slot></span>
-          <span><slot name="9"></slot></span>
-      </div>
+      <p>
+          <slot name="w00"></slot>
+          <slot name="w01"></slot>
+          <slot name="w02"></slot>
+          <slot name="w03"></slot>
+          <slot name="w04"></slot>
+          <slot name="w05"></slot>
+          <slot name="w06"></slot>
+          <slot name="w07"></slot>
+          <slot name="w08"></slot>
+          <slot name="w09"></slot>
+          <slot name="w10"></slot>
+          <slot name="w11"></slot>
+          <slot name="w12"></slot>
+          <slot name="w13"></slot>
+          <slot name="w14"></slot>
+          <slot name="w15"></slot>
+      </p>
 `;
-class WordElement extends HTMLElement {
+class LineaAnimata extends HTMLElement {
   constructor() {
     super();
     this.attachShadow({ mode: 'open' });
@@ -119,4 +128,4 @@ class WordElement extends HTMLElement {
     }
   }
 }
-customElements.define('word-element', WordElement);
+customElements.define('linea-animata', LineaAnimata);

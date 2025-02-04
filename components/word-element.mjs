@@ -1,5 +1,5 @@
 // word-element.mjs
-import { breathAnimation } from '../modules/animations.mjs'
+import { breath } from '../modules/animations.mjs'
 
 
 const template = document.createElement("template")
@@ -11,9 +11,18 @@ template.innerHTML = `
           padding: 0;
         }
       </style>
-      <span>
-        <slot></slot>
-      </span>
+      <div>
+          <span><slot name="0"></slot></span>
+          <span><slot name="1"></slot></span>
+          <span><slot name="2"></slot></span>
+          <span><slot name="3"></slot></span>
+          <span><slot name="4"></slot></span>
+          <span><slot name="5"></slot></span>
+          <span><slot name="6"></slot></span>
+          <span><slot name="7"></slot></span>
+          <span><slot name="8"></slot></span>
+          <span><slot name="9"></slot></span>
+      </div>
 `;
 class WordElement extends HTMLElement {
   constructor() {
@@ -25,51 +34,52 @@ class WordElement extends HTMLElement {
 
   // Define the allowed attributes
   static get observedAttributes() {
-    return ['id', 'animation', 'duration', 'delay', 'cue'];
+    return ['id', 'anima', 'duration', 'delay', 'go'];
   }
 
   // Create properties to match attributes
   get id() {
-    return this.getAttribute('id');
+    return this.firstElementChild.getAttribute('id');
   }
-  get animation() {
-    return this.getAttribute('animation');
+  get anima() {
+    return this.firstElementChild.getAttribute('anima');
   }
-  set animation(value) {
-    this.setAttribute('animation', value);
+  set anima(value) {
+    this.firstElementChild.setAttribute('anima', value);
   }
-  get cue() {
-    return parseFloat(this.getAttribute('cue')) || 0;
+  get go() {
+    return parseFloat(this.firstElementChild.getAttribute('go')) || 0;
   }
-  set cue(value) {
-    this.setAttribute('cue', value);
+  set go(value) {
+    this.firstElementChild.setAttribute('go', value);
   }
 
   get duration() {
-    return parseFloat(this.getAttribute('duration')) || 500;
+    return parseFloat(this.firstElementChild.getAttribute('duration')) || 500;
   }
   set duration(value) {
-    this.setAttribute('duration', value);
+    this.firstElementChild.setAttribute('duration', value);
   }
 
   get delay() {
-    return parseFloat(this.getAttribute('delay')) || 0;
+    return parseFloat(this.firstElementChild.getAttribute('delay')) || 0;
   }
   set delay(value) {
-    this.setAttribute('delay', value);
+    this.firstElementChild.setAttribute('delay', value);
   }
 
   connectedCallback() {
-    const wordId = this.getAttribute('id');
-    const animationType = this.getAttribute('animation');
-    const duration = this.getAttribute('duration');
-    const delay = this.getAttribute('delay');
-    console.log(`Word Component with id: ${wordId} connected with animation: ${animationType}
+    const wordId = this.firstElementChild.getAttribute('id');
+    const animationType = this.firstElementChild.getAttribute('anima');
+    const duration = this.firstElementChild.getAttribute('duration');
+    const delay = this.firstElementChild.getAttribute('delay');
+    const direction = this.firstElementChild.getAttribute('direction');
+    const iterations = this.firstElementChild.getAttribute('iterations');
+    const easing = this.firstElementChild.getAttribute('easing');
+    console.log(`Word Component with id: ${wordId} connected with anima: ${animationType}
       with a delay of ${delay} and a duration of ${duration}`);
     // setup styles and element based on the id or animation attributes
-    this.applyAnimation(animationType);
-
-
+    this.firstElementChild.applyAnimation(animationType);
   }
 
   //
@@ -81,27 +91,31 @@ class WordElement extends HTMLElement {
   attributeChangedCallback(attrName, oldVal, newVal) {
     console.log(`Attribute changed: ${attrName}`, { oldVal, newVal });
 
-    if (attrName === 'animation') {
-      this.applyAnimation(newVal);
+    if (attrName === 'anima') {
+      this.firstElementChild.applyAnimation(newVal);
     }
   }
 
   applyAnimation(animationType) {
-    if (this.currentAnimation) {
-      this.currentAnimation.cancel();
-    }
+    // if (this.currentAnimation) {
+    //   this.currentAnimation.cancel();
+    // }
 
-    const cue = this.cue;
-    const startTime = document.timeline.currentTime + cue;
+    const go = this.firstElementChild.go;
+    const nowTimeline = new DocumentTimeline({
+      originTime: document.timeline.currentTime,
+    })
+    const startTime = nowTimeline.currentTime + go;
+    // const startTime = document.timeline.currentTime + go;
 
     if (!animationType) return;
 
     if (animationType === 'breath') {
-      const animation = breathAnimation;
-      animation.effect.target = this;
-      animation.startTime = startTime;
-      animation.play();
-      this.currentAnimation = animation;
+      const anima = breath;
+      anima.effect.target = this.firstElementChild;
+      anima.startTime = startTime;
+      anima.play();
+      // this.currentAnimation = anima;
     }
   }
 }

@@ -7,10 +7,7 @@ const breathFrames = new KeyframeEffect(
   ],
   {
     duration: 500,
-    easing: 'ease-in-out',
-    fill: 'none',
-    iterations: 1
   }
 );
 
-export const breathAnimation = new Animation(breathFrames, document.timeline);
+export const breath = new Animation(breathFrames, document.timeline);

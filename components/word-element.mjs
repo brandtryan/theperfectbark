@@ -1,6 +1,5 @@
 // word-element.mjs
-import { breath } from "../modules/animations.mjs";
-console.log('Breath animation imported:', breath);
+import { breathFrames } from '../modules/animations.mjs'
 
 
 const template = document.createElement("template")
@@ -99,11 +98,13 @@ class WordElement extends HTMLElement {
 
     try {
       if (animationType === 'breath') {
-        const keyframes = [
-          { fontVariationSettings: '"wght" 70' },
-          { fontVariationSettings: '"wght" 900' },
-          { fontVariationSettings: '"wght" 400' }
-        ];
+        // const keyframes = [
+        //   { fontVariationSettings: '"wght" 70' },
+        //   { fontVariationSettings: '"wght" 900' },
+        //   { fontVariationSettings: '"wght" 400' }
+        // ];
+
+        const keyframes = breathFrames;
 
         const effect = new KeyframeEffect(
           this,
@@ -116,7 +117,7 @@ class WordElement extends HTMLElement {
           }
         );
 
-        const animation = new Animation(effect, document.timeline);
+        const animation = new Animation(effect, document.timeline)
         animation.startTime = startTime;
         animation.play();
         this.currentAnimation = animation;

@@ -1,5 +1,7 @@
 // word-element.mjs
 import { breath } from "../modules/animations.mjs";
+console.log('Breath animation imported:', breath);
+
 
 const template = document.createElement("template")
 template.innerHTML = `
@@ -22,15 +24,12 @@ class WordElement extends HTMLElement {
     this.shadowRoot.append(clone);
   }
 
-  //define the allowed attributes
+  // Define the allowed attributes
   static get observedAttributes() {
     return ['id', 'animation', 'duration', 'delay', 'cue'];
   }
 
-  //
-  //create properties to match attributes
-  //so either get/setAttribute or property names work
-
+  // Create properties to match attributes
   get id() {
     return this.getAttribute('id');
   }
@@ -40,26 +39,25 @@ class WordElement extends HTMLElement {
   set animation(value) {
     this.setAttribute('animation', value);
   }
+  get cue() {
+    return parseFloat(this.getAttribute('cue')) || 0;
+  }
+  set cue(value) {
+    this.setAttribute('cue', value);
+  }
 
   get duration() {
-    return this.getAttribute('duration');
+    return parseFloat(this.getAttribute('duration')) || 500;
   }
   set duration(value) {
     this.setAttribute('duration', value);
   }
 
   get delay() {
-    return this.getAttribute('delay');
+    return parseFloat(this.getAttribute('delay')) || 0;
   }
   set delay(value) {
     this.setAttribute('delay', value);
-  }
-
-  get cue() {
-    return this.getAttribute('cue');
-  }
-  set cue(value) {
-    this.setAttribute('cue', value);
   }
 
   connectedCallback() {
@@ -67,11 +65,12 @@ class WordElement extends HTMLElement {
     const animationType = this.getAttribute('animation');
     const duration = this.getAttribute('duration');
     const delay = this.getAttribute('delay');
-
     console.log(`Word Component with id: ${wordId} connected with animation: ${animationType}
       with a delay of ${delay} and a duration of ${duration}`);
     // setup styles and element based on the id or animation attributes
-    // this.applyAnimation(breath);
+    this.applyAnimation(animationType);
+
+
   }
 
   //
@@ -81,34 +80,49 @@ class WordElement extends HTMLElement {
   // attrName, oldVal, newVal always get passed in as arguments (don't have to use them all)
 
   attributeChangedCallback(attrName, oldVal, newVal) {
+    console.log(`Attribute changed: ${attrName}`, { oldVal, newVal });
+
     if (attrName === 'animation') {
-      // do something
-    }
-    if (attrName === 'duration') {
-
-    }
-    if (attrName === 'delay') {
-
-    }
-    if (attrName === 'cue') {
-
+      this.applyAnimation(newVal);
     }
   }
 
   applyAnimation(animationType) {
-    // Logic to apply different animations based on the animationType
-    if (animationType === 'breath') {
-      console.log('Applying breath animation');
-      //implementation
-      Element.animate(breath);
-
-    } else if (animationType === 'twitch') {
-      console.log('Applying twitch animation');
-      //implementation
+    if (this.currentAnimation) {
+      this.currentAnimation.cancel();
     }
-    else {
-      console.log('No animation specified');
-      //implementation
+
+    const cue = this.cue;
+    const startTime = document.timeline.currentTime + cue;
+
+    if (!animationType) return;
+
+    try {
+      if (animationType === 'breath') {
+        const keyframes = [
+          { fontVariationSettings: '"wght" 70' },
+          { fontVariationSettings: '"wght" 900' },
+          { fontVariationSettings: '"wght" 400' }
+        ];
+
+        const effect = new KeyframeEffect(
+          this,
+          keyframes,
+          {
+            duration: this.duration,
+            delay: this.delay,
+            easing: 'ease-in-out',
+            fill: "none"
+          }
+        );
+
+        const animation = new Animation(effect, document.timeline);
+        animation.startTime = startTime;
+        animation.play();
+        this.currentAnimation = animation;
+      }
+    } catch (error) {
+      console.error('Animation error:', error);
     }
   }
 }

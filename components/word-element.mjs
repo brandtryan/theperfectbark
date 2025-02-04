@@ -1,5 +1,5 @@
 // word-element.mjs
-import { breathFrames } from '../modules/animations.mjs'
+import { breathAnimation } from '../modules/animations.mjs'
 
 
 const template = document.createElement("template")
@@ -96,34 +96,12 @@ class WordElement extends HTMLElement {
 
     if (!animationType) return;
 
-    try {
-      if (animationType === 'breath') {
-        // const keyframes = [
-        //   { fontVariationSettings: '"wght" 70' },
-        //   { fontVariationSettings: '"wght" 900' },
-        //   { fontVariationSettings: '"wght" 400' }
-        // ];
-
-        const keyframes = breathFrames;
-
-        const effect = new KeyframeEffect(
-          this,
-          keyframes,
-          {
-            duration: this.duration,
-            delay: this.delay,
-            easing: 'ease-in-out',
-            fill: "none"
-          }
-        );
-
-        const animation = new Animation(effect, document.timeline)
-        animation.startTime = startTime;
-        animation.play();
-        this.currentAnimation = animation;
-      }
-    } catch (error) {
-      console.error('Animation error:', error);
+    if (animationType === 'breath') {
+      const animation = breathAnimation;
+      animation.effect.target = this;
+      animation.startTime = startTime;
+      animation.play();
+      this.currentAnimation = animation;
     }
   }
 }

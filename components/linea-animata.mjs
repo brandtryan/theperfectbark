@@ -43,52 +43,54 @@ class LineaAnimata extends HTMLElement {
 
   // Define the allowed attributes
   static get observedAttributes() {
-    return ['id', 'anima', 'duration', 'delay', 'go'];
+    return ['slot', 'data-anima', 'data-dur', 'data-ease', 'data-iter', 'data-go'];
   }
 
   // Create properties to match attributes
-  get id() {
-    return this.firstElementChild.getAttribute('id');
-  }
   get anima() {
-    return this.firstElementChild.getAttribute('anima');
+    return this.getAttribute('data-anima');
   }
   set anima(value) {
-    this.firstElementChild.setAttribute('anima', value);
+    this.setAttribute('data-anima', value);
+  }
+  get dur() {
+    return parseFloat(this.getAttribute('data-dur')) || 0;
+  }
+  set dur(value) {
+    this.setAttribute('data-dur', value);
+  }
+
+  get ease() {
+    return this.getAttribute('data-ease');
+  }
+  set ease(value) {
+    this.setAttribute('data-ease', value);
+  }
+  get iter() {
+    return parseFloat(this.getAttribute('data-iter')) || 0;
+  }
+  set iter(value) {
+    this.setAttribute('data-iter', value);
   }
   get go() {
-    return parseFloat(this.firstElementChild.getAttribute('go')) || 0;
+    return parseFloat(this.getAttribute('data-go')) || 0;
   }
   set go(value) {
-    this.firstElementChild.setAttribute('go', value);
+    this.setAttribute('data-go', value);
   }
 
-  get duration() {
-    return parseFloat(this.firstElementChild.getAttribute('duration')) || 500;
-  }
-  set duration(value) {
-    this.firstElementChild.setAttribute('duration', value);
-  }
-
-  get delay() {
-    return parseFloat(this.firstElementChild.getAttribute('delay')) || 0;
-  }
-  set delay(value) {
-    this.firstElementChild.setAttribute('delay', value);
-  }
 
   connectedCallback() {
-    const wordId = this.firstElementChild.getAttribute('id');
-    const animationType = this.firstElementChild.getAttribute('anima');
-    const duration = this.firstElementChild.getAttribute('duration');
-    const delay = this.firstElementChild.getAttribute('delay');
-    const direction = this.firstElementChild.getAttribute('direction');
-    const iterations = this.firstElementChild.getAttribute('iterations');
-    const easing = this.firstElementChild.getAttribute('easing');
-    console.log(`Word Component with id: ${wordId} connected with anima: ${animationType}
-      with a delay of ${delay} and a duration of ${duration}`);
+    const slot = this.getAttribute('slot');
+    const anima = this.getAttribute('data-anima');
+    const dur = this.getAttribute('data-dur');
+    const ease = this.getAttribute('data-ease');
+    const iter = this.getAttribute('data-iter');
+    const go = this.getAttribute('data-go');
+    console.log(`Word Component with id: ${slot} connected with anima: ${anima} with a delay of
+      ${dur}, an easing of ${ease} an iteration count of ${iter} and a startTime of ${go}`);
     // setup styles and element based on the id or animation attributes
-    this.firstElementChild.applyAnimation(animationType);
+    this.applyAnimation(anima);
   }
 
   //
@@ -101,27 +103,23 @@ class LineaAnimata extends HTMLElement {
     console.log(`Attribute changed: ${attrName}`, { oldVal, newVal });
 
     if (attrName === 'anima') {
-      this.firstElementChild.applyAnimation(newVal);
+      this.applyAnimation(newVal);
     }
   }
 
-  applyAnimation(animationType) {
+  applyAnimation(anima) {
     // if (this.currentAnimation) {
     //   this.currentAnimation.cancel();
     // }
 
-    const go = this.firstElementChild.go;
-    const nowTimeline = new DocumentTimeline({
-      originTime: document.timeline.currentTime,
-    })
-    const startTime = nowTimeline.currentTime + go;
-    // const startTime = document.timeline.currentTime + go;
+    const go = this.go;
+    const startTime = document.timeline.currentTime + go;
 
-    if (!animationType) return;
+    if (!anima) return;
 
-    if (animationType === 'breath') {
+    if (anima === 'breath') {
       const anima = breath;
-      anima.effect.target = this.firstElementChild;
+      anima.effect.target = this;
       anima.startTime = startTime;
       anima.play();
       // this.currentAnimation = anima;

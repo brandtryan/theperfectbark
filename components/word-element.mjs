@@ -32,39 +32,39 @@ class WordElement extends HTMLElement {
     return this.getAttribute('id');
   }
   get animation() {
-    return this.getAttribute('animation');
+    return this.getAttribute('animation') || "";
   }
   set animation(value) {
     this.setAttribute('animation', value);
   }
-  get cue() {
-    return parseFloat(this.getAttribute('cue')) || 0;
-  }
-  set cue(value) {
-    this.setAttribute('cue', value);
-  }
-
   get duration() {
     return parseFloat(this.getAttribute('duration')) || 0;
   }
   set duration(value) {
     this.setAttribute('duration', value);
   }
-
   get delay() {
     return parseFloat(this.getAttribute('delay')) || 0;
   }
   set delay(value) {
     this.setAttribute('delay', value);
   }
+  get cue() {
+    return parseFloat(this.getAttribute('cue'));
+  }
+  set cue(value) {
+    this.setAttribute('cue', value);
+  }
+
 
   connectedCallback() {
     const id = this.getAttribute('id');
     const animationType = this.getAttribute('animation');
     const duration = this.getAttribute('duration');
     const delay = this.getAttribute('delay');
+    const cue = this.getAttribute('cue');
     console.log(`Word Component with id: ${id} connected with animation: ${animationType}
-      with a delay of ${delay} and a duration of ${duration}`);
+      with a delay of ${delay} a duration of ${duration} and a startTime of ${cue}`);
     // setup styles and element based on the id or animation attributes
     this.applyAnimation(animationType);
 

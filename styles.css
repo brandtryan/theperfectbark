@@ -30,6 +30,8 @@
     section {
       place-content: center;
       place-self: center;
+      container: page / size;
+      content-visibility: auto;
       width: 48ch;
       height: 100vh;
       font-size: clamp(1.4rem, 0.75vw + 1.24rem, 2.2rem);
@@ -37,5 +39,10 @@
       white-space: nowrap;
       overflow: visible;
       padding: 0;
+    }
 
+    p {
+      content-visibility: auto;
+      margin: 0;
+      padding: 0;
     }

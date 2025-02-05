@@ -32,7 +32,7 @@ class WordElement extends HTMLElement {
     return this.getAttribute('id');
   }
   get animation() {
-    return this.getAttribute('animation') || "";
+    return this.getAttribute('animation');
   }
   set animation(value) {
     this.setAttribute('animation', value);

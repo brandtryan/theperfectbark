@@ -13,4 +13,4 @@ const breathFrames = new KeyframeEffect(
   }
 );
 
-export const breathAnimation = new Animation(breathFrames, document.timeline);
+export const breath = new Animation(breathFrames, document.timeline);

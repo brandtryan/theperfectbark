@@ -1,6 +1,5 @@
 // word-element.mjs
-import { breath } from "../modules/animations.mjs";
-console.log('Breath animation imported:', breath);
+import { breath } from '../modules/animations.mjs'
 
 
 const template = document.createElement("template")
@@ -19,9 +18,8 @@ template.innerHTML = `
 class WordElement extends HTMLElement {
   constructor() {
     super();
-    this.attachShadow({ mode: 'open' });
     let clone = template.content.cloneNode(true);
-    this.shadowRoot.append(clone);
+    this.append(clone);
   }
 
   // Define the allowed attributes
@@ -47,7 +45,7 @@ class WordElement extends HTMLElement {
   }
 
   get duration() {
-    return parseFloat(this.getAttribute('duration')) || 500;
+    return parseFloat(this.getAttribute('duration')) || 0;
   }
   set duration(value) {
     this.setAttribute('duration', value);
@@ -61,11 +59,11 @@ class WordElement extends HTMLElement {
   }
 
   connectedCallback() {
-    const wordId = this.getAttribute('id');
+    const id = this.getAttribute('id');
     const animationType = this.getAttribute('animation');
     const duration = this.getAttribute('duration');
     const delay = this.getAttribute('delay');
-    console.log(`Word Component with id: ${wordId} connected with animation: ${animationType}
+    console.log(`Word Component with id: ${id} connected with animation: ${animationType}
       with a delay of ${delay} and a duration of ${duration}`);
     // setup styles and element based on the id or animation attributes
     this.applyAnimation(animationType);
@@ -97,32 +95,12 @@ class WordElement extends HTMLElement {
 
     if (!animationType) return;
 
-    try {
-      if (animationType === 'breath') {
-        const keyframes = [
-          { fontVariationSettings: '"wght" 70' },
-          { fontVariationSettings: '"wght" 900' },
-          { fontVariationSettings: '"wght" 400' }
-        ];
-
-        const effect = new KeyframeEffect(
-          this,
-          keyframes,
-          {
-            duration: this.duration,
-            delay: this.delay,
-            easing: 'ease-in-out',
-            fill: "none"
-          }
-        );
-
-        const animation = new Animation(effect, document.timeline);
-        animation.startTime = startTime;
-        animation.play();
-        this.currentAnimation = animation;
-      }
-    } catch (error) {
-      console.error('Animation error:', error);
+    if (animationType === 'breath') {
+      const animation = breath;
+      animation.effect.target = this;
+      animation.startTime = startTime;
+      animation.pause();
+      this.currentAnimation = animation;
     }
   }
 }

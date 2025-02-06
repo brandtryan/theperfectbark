@@ -30,19 +30,22 @@
     section {
       place-content: center;
       place-self: center;
-      container: page / size;
-      content-visibility: auto;
-      width: 48ch;
+      width: 49ch;
       height: 100vh;
+      content-visibility: auto;
+      contain-intrinsic-width: 48ch;
+      contain-intrinsic-height: 100vh;
       font-size: clamp(1.4rem, 0.75vw + 1.24rem, 2.2rem);
       margin: 0 auto;
       white-space: nowrap;
       overflow: visible;
+      margin: 0;
       padding: 0;
+      border: 2px dotted cornflowerblue;
     }
 
     p {
-      content-visibility: auto;
       margin: 0;
       padding: 0;
+      border: 1px solid coral;
     }

@@ -1,12 +1,8 @@
-// import { page00Lines } from "./modules/page00.mjs";
-
 document.addEventListener('DOMContentLoaded', () => {
   //HTML has loaded
   console.log('Main.js and the DOM are loaded');
 });
 
-console.log(s00l00);
-console.log(s00l00w00);
 
 
 // const s00l01 = document.getElementById('s00l00');

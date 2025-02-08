@@ -6,14 +6,13 @@ export const [s00Words] = [s00WordsArray];
 
 // Helper function to create and start animation
 function createAndPlayAnimation(element) {
-  if (!element) return null;
+  if (!element || element.dataset.enable === 'false') return null;
 
   const frames = JSON.parse(element.dataset.frames);
   const options = {
     duration: parseFloat(element.dataset.duration),
     delay: parseFloat(element.dataset.delay),
-    iterations: parseFloat(element.dataset.iterations),
-    easing: element.dataset.easing
+    easing: element.dataset.easing,
   };
 
   const effect = new KeyframeEffect(element, frames, options);
@@ -24,17 +23,52 @@ function createAndPlayAnimation(element) {
 }
 
 // Create animations for all lines
-const animations = s00LinesArray.map((line, index) => {
-  const animation = createAndPlayAnimation(line);
+const lineAnimations = s00LinesArray.map((line, index) => {
+  const lineAnimation = createAndPlayAnimation(line);
   console.log(`Created animation for line ${index}:`, {
+    enabled: line.dataset.enable,
     duration: line.dataset.duration,
     delay: line.dataset.delay,
-    iterations: line.dataset.iterations
+    easing: line.dataset.easing,
   });
-  return animation;
+  return lineAnimation;
 });
 
-export const s00Animations = animations;
+export const s00LineAnimations = lineAnimations;
+
+// Get a specific animation
+// const firstLineAnimation = s00LineAnimations[0];
+
+// Pause all animations
+s00LineAnimations.forEach(animation => animation?.pause());
+
+// Play all animations
+// s00LineAnimations.forEach(animation => animation?.play());
+
+
+// Create animations for all words
+const wordAnimations = s00WordsArray.map((word, index) => {
+  const wordAnimation = createAndPlayAnimation(word);
+  console.log(`Created animation for word ${index}:`, {
+    enabled: word.dataset.enable,
+    duration: word.dataset.duration,
+    delay: word.dataset.delay,
+    easing: word.dataset.easing
+  });
+  return wordAnimation;
+});
+
+export const s00WordAnimations = wordAnimations;
+
+// Get a specific animation
+// const firstWordAnimation = s00WordAnimations[0];
+
+// Pause all animations
+// s00WordAnimations.forEach(animation => animation?.pause());
+
+// Play all animations
+// s00WordAnimations.forEach(animation => animation?.play());
+
 
 // Key improvements:
 
@@ -47,12 +81,4 @@ export const s00Animations = animations;
 // Made the code more maintainable and easier to modify
 // Usage remains the same, but now you can also access animations if needed:
 
-// // Get a specific animation
-// const firstLineAnimation = s00Animations[0];
-
-// // Pause all animations
-// s00Animations.forEach(animation => animation?.pause());
-
-// // Play all animations
-// s00Animations.forEach(animation => animation?.play());
 

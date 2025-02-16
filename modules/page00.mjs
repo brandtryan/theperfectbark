@@ -25,12 +25,12 @@ function createAndPlayAnimation(element) {
 // Create animations for all lines
 const lineAnimations = s00LinesArray.map((line, index) => {
   const lineAnimation = createAndPlayAnimation(line);
-  console.log(`Created animation for line ${index}:`, {
-    enabled: line.dataset.enable,
-    duration: line.dataset.duration,
-    delay: line.dataset.delay,
-    easing: line.dataset.easing,
-  });
+  // console.log(`Created animation for line ${index}:`, {
+  //   enabled: line.dataset.enable,
+  //   duration: line.dataset.duration,
+  //   delay: line.dataset.delay,
+  //   easing: line.dataset.easing,
+  // });
   return lineAnimation;
 });
 
@@ -49,12 +49,12 @@ s00LineAnimations.forEach(animation => animation?.pause());
 // Create animations for all words
 const wordAnimations = s00WordsArray.map((word, index) => {
   const wordAnimation = createAndPlayAnimation(word);
-  console.log(`Created animation for word ${index}:`, {
-    enabled: word.dataset.enable,
-    duration: word.dataset.duration,
-    delay: word.dataset.delay,
-    easing: word.dataset.easing
-  });
+  // console.log(`Created animation for word ${index}:`, {
+  //   enabled: word.dataset.enable,
+  //   duration: word.dataset.duration,
+  //   delay: word.dataset.delay,
+  //   easing: word.dataset.easing
+  // });
   return wordAnimation;
 });
 

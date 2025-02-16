@@ -1,5 +1,5 @@
 // word-element.mjs
-import { breath } from '../modules/animations.mjs'
+import { breath } from '../reference/animations/animations.mjs'
 
 
 const template = document.createElement("template")

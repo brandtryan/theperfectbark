@@ -1,0 +1,90 @@
+@import 'fab-unit';
+
+@font-face {
+  font-family: 'Gramercy';
+  src: url('../fonts/ABCGramercyVariable-Trial.woff2')
+    format('woff2-variations');
+  font-feature-settings: 'calt' 1, 'rlig' 1, 'rvrn' 1, 'kern' 1, 'rclt' 1,
+    'ss06' 1, 'dlig' 1, 'liga' 1;
+  line-gap-override: normal;
+  font-weight: 200 1000;
+  font-optical-sizing: 12 72;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gramercy';
+  src: url('../fonts/ABCGramercyItalicVariable-Trial.woff2')
+    format('woff2-variations');
+  font-feature-settings: 'calt' 1, 'rlig' 1, 'rvrn' 1, 'kern' 1, 'rclt' 1,
+    'ss06' 1, 'dlig' 1, 'liga' 1;
+  line-gap-override: normal;
+  font-weight: 200 1000;
+  font-optical-sizing: 12 72;
+  font-style: italic;
+  font-display: swap;
+}
+
+/***************************************
+FAB-UNITS
+*/ //////////////////////////////////////
+
+/* overwrite default values 🪄 */
+$screen-max: 1800;
+
+/* Style guide variables fab-unit 🪄 */
+
+$fab-font-size-body: fab-unit(16, 22);
+$fab-font-size-body-small: fab-unit(14, 16);
+
+$fab-font-size-h1: fab-unit(60, 160);
+$fab-font-size-h2: fab-unit(42, 110);
+$fab-font-size-h3: fab-unit(28, 60);
+
+$fab-space-s: fab-unit(20, 30);
+$fab-space-m: fab-unit(40, 80);
+$fab-space-l: fab-unit(60, 120);
+$fab-space-xl: fab-unit(80, 180);
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  // font-size: 62.5%;
+  font-size: calc(100% * (#{strip-units($fab-rem-base)} / 16)); // px to rem
+  background-color: goldenrod;
+}
+body {
+  font-family: 'Gramercy', 'Segoe UI', Tahoma, sans-serif;
+  font-style: normal;
+  font-weight: 350;
+  font-optical-sizing: auto;
+  font-size: $fab-font-size-body;
+  color: #333;
+  width: 60rem;
+  line-height: 1.36;
+  margin: 0 auto;
+  white-space: pre;
+}
+
+.wrapper {
+  max-width: rem($screen-max);
+  margin-inline: auto;
+  padding: $fab-space-m;
+}
+
+h1 {
+  font-size: $fab-font-size-h1;
+}
+
+p {
+  margin-block: $fab-space-s;
+}
+
+p > span {
+  display: block;
+}

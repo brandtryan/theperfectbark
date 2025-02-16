@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Ikarus";
+  src: url("./Ikarus.woff2") format("woff2-variations");
+}
+
+html {
+  font-size: 100%;
+  display: block;
+}
+
+body {
+  background-color: black;
+  font-family: "Ikarus";
+  font-feature-settings: "calt" 1, "liga" 1, "rlig" 1, "rvrn" 1, "kern" 1, "rclt" 1;
+  font-variation-settings: "wght" 200, "wdth" 100, "ital" 0, "cont" 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+#w,
+#t,
+#f {
+  font-size: 6rem;
+  color: antiquewhite;
+}

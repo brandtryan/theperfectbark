@@ -1,0 +1,245 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Created by Matt McDonagh, LYIT.ie as a component of an MA Degree through ITDublin.
+This work is distributed under a Creative Commons license (CC). You may copy, distribute use and alter this document, but must include this attribute, and derivatives must also include this CC license.*/
+
+*,
+*::after,
+*::before {
+  border: 0;
+  margin: 0;
+  padding: 0;
+} /* Browser reset - feel free to replace with your preferred reset, eg: Eric Meyers or css normalize */
+
+body {
+  width: 100%;
+  font-family: Cambria, Georgia, 'Times New Roman', Times, serif; /* Cambria is reasonably widespread, Georgia is very widespread, both designed for screen. See extended font stacks for alternatives */
+  font-size: 16px; /* a practical size for todays desktop browsers. This is the base unit - if this changes, all other values will need to update*/
+  line-height: 25px; /*approx 1.6 times font-size (rounded) */
+  font-weight: 400; /* normal weight */
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+}
+
+/* ================ structural areas - for demo only - may be safely deleted or adapted ================== */
+
+#container {
+  width: 980px; /* accommodates 980px grid system */
+  margin: 0 auto; /* centers container horizontally */
+  overflow: hidden; /*allows container to extend with contents */
+  padding: 25px 0 0 0; /* gives a top margin of 25px */
+}
+
+#nav {
+  width: 150px;
+  overflow: hidden; /*allows container to extend with contents */
+  text-align: right; /* subjective alignment, to align with flush left main paragraphs */
+  padding: 88px 50px 0 0; /* the top margin of 88px is to align the nav with the baseline grid of the main text */
+  float: left;
+}
+
+#content {
+  width: 530px; /* allows optimum line length, ~65 characters per line */
+  overflow: hidden; /*allows container to extend with contents */
+  float: left;
+  padding: 0 50px 0 0; /* gives 50px gutter between main text and sidebar */
+}
+
+#sidebar {
+  width: 200px;
+  overflow: hidden; /*allows container to extend with contents */
+  font-size: 12px;
+  float: left;
+  padding: 101px 0 0 0; /*required to align with baseline grid*/
+}
+#footer {
+  width: 980px;
+  min-height: 100px; /*prevents footer from collapsing if no content present */
+  overflow: hidden;
+  padding: 0 0 0 200px; /* indents content 200px from the left, keeps alignment with main content */
+  font-size: 12px;
+}
+
+/* =================================== type settings ===================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+blockquote {
+  margin: 0 0 25px 0; /* keeps a consistent 25px space below elements */
+}
+
+h1 {
+  font-size: 24px; /* size and weight may be changed, but will have an impact on the padding required to align later elements */
+  font-weight: 400; /* normal*/
+}
+
+h2 {
+  font-size: 18px; /* size and weight may be changed, but will have an impact on the padding required to align later elements */
+  font-weight: 700; /*bold */
+}
+
+h3 {
+  font-size: 16px; /* size and weight may be changed, but will have an impact on the padding required to align later elements */
+  font-weight: 700; /*bold */
+}
+
+h4 {
+  font-size: 14px; /* size and weight may be changed, but will have an impact on the padding required to align later elements */
+  font-weight: 700; /*bold */
+  position: relative; /*required for top, below */
+  top: 1px; /* needed to conform to baseline grid*/
+}
+
+h5 {
+  font-size: 12px; /* size and weight may be changed, but will have an impact on the padding required to align later elements */
+  font-weight: 700; /*bold */
+  position: relative; /*required for top, below */
+  top: 2px; /* needed to conform to baseline grid*/
+}
+
+h6 {
+  font-size: 10px; /* size and weight may be changed, but will have an impact on the padding required to align later elements */
+  font-weight: 700; /*bold */
+  position: relative; /*required for top, below */
+  top: 3px; /* needed to conform to baseline grid*/
+}
+
+p.intro:first-letter {
+  /* styles Drop Caps in paragraph (class=intro). Embedded fonts can work well here*/
+  float: left; /*required*/
+  font-size: 53px; /* sized to fit two lines of text. If base font size changes, this font size needs to be updated */
+  font-weight: 400; /* normal weight */
+  padding: 12px 2px 0 0; /*requires padding for positioning with baseline grid */
+}
+
+p.intro:first-line {
+  font-variant: small-caps; /*changes first line of paragraph (class=Intro) to small caps */
+}
+
+p.bodytext {
+  text-indent: 25px; /* 1st line indent on paragraphs with class 'bodytext' */
+}
+
+#sidebar h2 {
+  /* reduced size h2 for sidebar */
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0; /*overrides previous margin, removes spacing between heading and following text */
+}
+
+#content h3 {
+  margin: 0; /*overrides previous margin, removes spacing between heading and following text */
+}
+
+/* ========== content area lists ================================== */
+#content ul li {
+  margin: 0 25px; /* indents list by 25px*/
+  list-style: none; /* removes standard bullet points */
+  font-style: italic; /* alter as desired */
+}
+
+#content ul li:before {
+  content: '\25C6'; /*unicode for diamon bullet point - can be replaced with alternative unicode value, or with image */
+  margin: 0 25px 0 0; /* indents list item by 25px from bullet point */
+  position: relative; /* required for nudge, below */
+  top: -1px; /*nudges bullet 1px upwards*/
+}
+
+/* =========================== Block quotes ================================ */
+
+blockquote {
+  font-size: 18px;
+  font-style: italic;
+  margin: -1px 25px 26px 25px; /* -1px top to conform to grid, 25px for left & right, and 26px bottom to compensate for the top margin */
+}
+
+/*================ left curly quotes - style, position and color ============= */
+blockquote:before {
+  content: '\201C'; /* Unicode for left curly quote */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Georgia has better curly quotes than Cambria */
+  font-size: 36px; /* exaggerated size - can be changed, but position should be altered to adapt to new size */
+  color: #900;
+  margin: 0 25px 0 0; /* 25px margin between quote marks and blockquote */
+  position: relative; /* required for top positioning */
+  top: 15px; /* nudges quotes into position */
+  line-height: 12px; /*compensates for increased typesize, complies with grid */
+}
+/*================ right curly quotes - style, position and color ============= */
+blockquote:after {
+  content: '\201D'; /* Unicode for right curly quote */
+  font-family: Georgia, 'Times New Roman', Times, serif; /* Georgia has better curly quotes than Cambria */
+  font-size: 36px; /* exaggerated size - can be changed, but position should be altered to adapt to new size */
+  color: #900;
+  margin: 0 0 0 25px; /* 25px margin between quote marks and blockquote */
+  position: relative; /* required for top positioning */
+  top: 15px; /* nudges quotes into position */
+  line-height: 12px; /*compensates for increased typesize, complies with grid */
+}
+
+/* ===================================== nav elements ======================================= */
+
+#nav ul li {
+  list-style: none; /* removes bullet points from list items */
+}
+
+#nav ul li a {
+  /* set style and color of nav links */
+  font-style: italic;
+  font-weight: 700; /* bold*/
+  text-decoration: none;
+  line-height: 50px; /* set in increments of 25px; eg: 25px or 50px */
+  color: #900;
+}
+
+#nav ul li a:visited {
+  /* set style and color of visited nav links */
+  font-style: italic;
+  font-weight: 700; /* bold*/
+  text-decoration: none;
+  line-height: 50px; /* set in increments of 25px; eg: 25px or 50px */
+  color: #900;
+}
+
+#nav ul li a:hover {
+  /* set style and color of nav links on hover */
+  color: #060;
+  text-decoration: underline;
+}
+
+/* ====================================== footer elements =================================== */
+
+#footer ul li {
+  display: inline; /* displays footer nav list in a line */
+}
+
+#footer ul li:after {
+  /* inserts a line (|) spacer between each link */
+  content: '|';
+  margin: 0 10px; /* puts 10 px of space to the left and right of the spacer */
+}
+
+#footer ul li a {
+  /* link color*/
+  color: #900;
+  text-decoration: none; /*no underline on links */
+}
+
+#footer ul li a:visited {
+  /* visited link color */
+  color: #900;
+  text-decoration: none; /*no underline on links */
+}
+
+#footer ul li a:hover {
+  /* link color on hover */
+  color: #030;
+  text-decoration: underline; /* underline on links */
+}

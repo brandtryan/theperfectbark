@@ -1,0 +1,299 @@
+:root {
+  --grt-width: 680px;
+  --grt-font: 'Times New Roman', Times, Georgia, serif;
+  --grt-size-1: 52px;
+  --grt-size-2: 41px;
+  --grt-size-3: 32px;
+  --grt-size-4: 25px;
+  --grt-size-5: 20px;
+  --grt-size-6: 16px;
+  --grt-height-1: 78px;
+  --grt-height-2: 63px;
+  --grt-height-3: 50px;
+  --grt-height-4: 40px;
+  --grt-height-5: 33px;
+  --grt-height-6: 27px;
+  --grt-spacing-1: 53px;
+  --grt-spacing-2: 33px;
+  --grt-spacing-3: 20px;
+  --grt-spacing-4: 12px;
+  --grt-spacing-5: 7px;
+  --grt-spacing-6: 4px;
+  --grt-height-h1: 63px;
+  --grt-height-h2: 50px;
+  --grt-height-h3: 40px;
+  --grt-height-h4: 33px;
+  --grt-height-caption: 27px;
+  --grt-font-code: Menlo, Consolas, Monaco, 'Andale Mono', Courier, Verdana,
+    sans-serif;
+  --grt-size-code: 18px;
+  --grt-color-bg: #121212;
+  --grt-color: #ededed;
+  --grt-color-accent: #828282;
+  --grt-color-links: #d42020;
+  --grt-color-callout: #cce8cc;
+  --grt-color-callout-alert: #ffe91f;
+  --grt-color-callout-note: #ccf1ff;
+  --grt-color-button: #eeeeee;
+  --grt-color-button-save: #509b26;
+  --grt-color-button-delete: #d50b0b;
+  --grt-color-button-action: #12a7ff;
+  --grt-color-button-update: #fcfc0d;
+  --grt-color-code-pre-bg: rgba(0, 0, 0, 0.08);
+  --grt-color-highlight: #fffb7a;
+}
+.grt {
+  max-width: var(--grt-width);
+  font-family: var(--grt-font);
+  font-size: var(--grt-size-5);
+  line-height: var(--grt-height-5);
+  color: var(--grt-color);
+  background-color: var(--grt-color-bg);
+}
+.grt a {
+  color: var(--grt-color-links);
+}
+.grt h1 {
+  font-size: var(--grt-size-2);
+  line-height: var(--grt-height-h1);
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: var(--grt-spacing-2);
+}
+.grt h2 {
+  font-size: var(--grt-size-3);
+  line-height: var(--grt-height-h2);
+  font-weight: normal;
+  margin-top: var(--grt-spacing-1);
+  margin-bottom: var(--grt-spacing-3);
+}
+.grt h3 {
+  font-size: var(--grt-size-4);
+  line-height: var(--grt-height-h3);
+  font-weight: normal;
+  margin-top: var(--grt-spacing-2);
+  margin-bottom: var(--grt-spacing-4);
+}
+.grt h1:first-child,
+.grt h2:first-child,
+.grt h3:first-child,
+.grt h1 + h2,
+.grt h2 + h3 {
+  margin-top: 0;
+}
+.grt h4 {
+  font-size: var(--grt-size-5);
+  line-height: var(--grt-height-h4);
+  font-weight: normal;
+  margin-top: 0;
+  margin-bottom: var(--grt-spacing-5);
+}
+.grt p,
+.grt ul,
+.grt ol,
+.grt img,
+.grt blockquote,
+.grt pre,
+.grt .callout,
+.grt .caption,
+.grt .footnotes {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: var(--grt-spacing-2);
+}
+.grt ul,
+.grt ol {
+  padding-left: 0;
+  margin-left: var(--grt-spacing-2);
+}
+.grt ul ul,
+.grt ul ol,
+.grt ol ul,
+.grt ol ol {
+  margin-top: var(--grt-spacing-4);
+  margin-left: var(--grt-spacing-3);
+}
+.grt li {
+  margin-bottom: var(--grt-spacing-4);
+}
+.grt img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+.grt blockquote {
+  color: var(--grt-color-accent);
+  padding-left: var(--grt-spacing-3);
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-width: 0 0 0 var(--grt-spacing-5);
+}
+.grt sub,
+.grt sup {
+  line-height: 0.5em;
+  color: var(--grt-color-accent);
+  padding: 0 1px;
+}
+.grt code,
+.grt pre,
+.grt kbd {
+  font-family: var(--grt-font-code);
+  font-size: var(--grt-size-code);
+}
+.grt code,
+.grt pre {
+  background-color: var(--grt-color-code-pre-bg);
+}
+.grt code {
+  padding: var(--grt-spacing-6);
+  border-radius: var(--grt-spacing-5);
+  margin: 0 1px;
+}
+.grt pre {
+  padding: var(--grt-spacing-3);
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-width: 0 0 0 var(--grt-spacing-5);
+  border-radius: 0 var(--grt-spacing-4) var(--grt-spacing-4) 0;
+}
+.grt kbd {
+  color: #4e4e4e;
+  background-color: #f7f7f7;
+  padding: var(--grt-spacing-6) var(--grt-spacing-5);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: var(--grt-spacing-5);
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.2), 0 0 0 1px #fafafa inset;
+  margin: 0 1px;
+}
+.grt .center,
+.grt .left,
+.grt .right {
+  display: block;
+}
+.grt .center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.grt .drop-cap {
+  float: left;
+  font-size: calc(var(--grt-spacing-2) * 2);
+  line-height: 1em;
+  font-weight: bold;
+  margin-right: var(--grt-spacing-5);
+}
+.grt .callout {
+  color: #111111;
+  background-color: var(--grt-color-callout);
+  padding: var(--grt-spacing-3);
+}
+.grt .callout.alert {
+  color: #111111;
+  background-color: var(--grt-color-callout-alert);
+}
+.grt .callout.note {
+  color: #111111;
+  background-color: var(--grt-color-callout-note);
+}
+.grt .button {
+  display: inline-block;
+  width: auto;
+  vertical-align: top;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: normal;
+  line-height: 1em;
+  color: #111111;
+  text-decoration: none;
+  background-color: var(--grt-color-button);
+  padding: 9px var(--grt-spacing-4);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom-width: 4px;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+  border-radius: var(--grt-spacing-4);
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+.grt .button:active {
+  border-bottom-width: 2px;
+  margin-top: 2px;
+}
+.grt .button.save {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  background-color: var(--grt-color-button-save);
+}
+.grt .button.delete {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  background-color: var(--grt-color-button-delete);
+}
+.grt .button.action {
+  color: #ffffff;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+  background-color: var(--grt-color-button-action);
+}
+.grt .button.update {
+  color: #111111;
+  background-color: var(--grt-color-button-update);
+}
+.grt .caption {
+  font-size: var(--grt-size-6);
+  line-height: var(--grt-height-caption);
+  color: var(--grt-color-accent);
+  margin-top: -28px;
+}
+.grt h2 + .caption {
+  margin-top: -17px;
+  margin-bottom: var(--grt-spacing-3);
+}
+.grt h3 + .caption {
+  margin-top: -10px;
+  margin-bottom: var(--grt-spacing-4);
+}
+.grt blockquote + .caption {
+  padding-left: calc(var(--grt-spacing-5) + var(--grt-spacing-3));
+}
+.grt .center + .caption {
+  text-align: center;
+}
+.grt .highlight {
+  background-color: var(--grt-color-highlight);
+  padding: var(--grt-spacing-6) 0;
+}
+.grt .pop {
+  box-shadow: 0 0 var(--grt-spacing-4) rgba(0, 0, 0, 0.4);
+}
+.grt .footnotes {
+  font-size: var(--grt-size-6);
+  line-height: var(--grt-height-6);
+  color: var(--grt-color-accent);
+  padding-top: var(--grt-spacing-3);
+  border-top: 1px dotted rgba(0, 0, 0, 0.15);
+}
+.grt .footnotes p {
+  margin-bottom: var(--grt-spacing-3);
+}
+.grt ul ul,
+.grt ul ol,
+.grt ol ul,
+.grt ol ol,
+.grt li:last-child,
+.grt blockquote > :last-child,
+.grt .callout > :last-child,
+.grt .footnotes > :last-child {
+  margin-bottom: 0;
+}
+@media all and (min-width: 680px) {
+  .grt .left {
+    float: left;
+    clear: both;
+    margin-right: var(--grt-spacing-2);
+  }
+  .grt .right {
+    float: right;
+    clear: both;
+    margin-left: var(--grt-spacing-2);
+  }
+}

@@ -1,0 +1,49 @@
+@font-face {
+	font-family: Ikarus;
+	src: url('Ikarus.woff2') format('woff2-variations');
+	font-style: normal;
+	font-display: swap;
+	unicode-range: U+00-7F, U+2014;
+}
+
+html {
+	font-size: 62.5%;
+	font-synthesis: none;
+}
+
+body {
+	border: 1px solid powderblue;
+	width: 52ch;
+	margin: 0% auto;
+	background: #111;
+	color: rgba(255, 235, 205, 0.788);
+	font-family: Ikarus, Arial, Helvetica, sans-serif;
+	font-feature-settings: 'case' 1, 'liga' 1, 'ss02' 1, 'ss03' 1, 'ss04' 1, 'ss11' 1, 'ss13' 1, 'ss17' 1, 'ss18' 1;
+	font-variation-settings: 'wght' 400, 'wdth' 100, 'ital' 0, 'cont' 0;
+	font-style: normal;
+	font-kerning: normal;
+	font-size: clamp(1.6rem, 2.46vw, 2.2rem);
+	text-wrap-mode: nowrap;
+	overflow: visible;
+}
+
+div {
+	width: 52ch;
+	min-height: 100vh;
+	border: 1px dashed dodgerblue;
+	content-visibility: auto;
+	padding: 38cqb 0;
+	overflow: visible;
+}
+
+p {
+	border: 1px solid greenyellow;
+	line-height: clamp(1.6rem * 1.5, 2.46vw * 1.5, 2.2rem * 1.5);
+	overflow: visible;
+}
+
+span:hover::after {
+	content: '(' attr(id) ')';
+	color: dodgerblue;
+	font-size: 1rem;
+}

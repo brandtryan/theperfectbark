@@ -1,20 +1,8 @@
-// const template = document.createElement('template');
-// template.innerHTML = `
-// 	<style>
-// 		@import url('../../style.css');
-// 	</style>
-// `;
-
 export default class MovingTextWord extends HTMLElement {
 	constructor() {
 		super();
-		// let clone = template.content.cloneNode(true);
-		// this.appendChild(clone);
 
-		if (document.querySelector('mt-word') !== null) {
-			this.textContent = this.getAttribute('txt');
-		}
-		this.animation = null;
+		this.textContent = this.getAttribute('txt');
 		this.keyframes = [
 			{
 				fontVariationSettings: `"wght" ${parseInt(this.getAttribute('from-axis-1'))}, "wdth" ${parseInt(

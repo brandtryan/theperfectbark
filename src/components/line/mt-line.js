@@ -11,7 +11,36 @@ export default class MovingTextLine extends HTMLElement {
 		super();
 		let clone = template.content.cloneNode(true);
 		this.appendChild(clone);
-		console.log('hi from line constructor');
+
+		const lineWords = Array.from(this.children);
+		const lineAnimations = [];
+
+		for (let word in lineWords) {
+			lineAnimations.push(word.animation);
+		}
+
+		if (this.hasAttribute('preview')) {
+			this.style.cursor = 'pointer';
+			this.addEventListener('click', this.handlePreviewClick);
+			const label = 'connectedCallback';
+			console.groupCollapsed(label);
+			console.log(`${this.id}: Line Previews ready...`);
+			console.log(`${this.id}: connectedCallback() completed`);
+			console.groupEnd(label);
+		}
+
+		this.handlePreviewClick = () => {
+			const previewStartTime = document.timeline.currentTime;
+
+			lineAnimations.forEach(animation => {
+				animation.cancel();
+				const element = animation.effect.target;
+				const start = parseFloat(element.getAttribute('start'));
+				const delay = previewStartTime + start;
+				animation.play();
+				animation.startTime = delay;
+			});
+		};
 	}
 
 	connectedCallback() {

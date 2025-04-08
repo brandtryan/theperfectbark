@@ -1,8 +1,5 @@
 const template = document.createElement('template');
 template.innerHTML = `
-	<style>
-		@import url('../../style.css');
-	</style>
 	<slot></slot>
 `;
 
@@ -10,53 +7,53 @@ export default class MovingTextLine extends HTMLElement {
 	constructor() {
 		super();
 		let clone = template.content.cloneNode(true);
-		this.appendChild(clone);
+		this.append(clone);
 
-		const lineWords = Array.from(this.children);
-		const lineAnimations = [];
+		// const lineWords = Array.from(this.children);
+		// const lineAnimations = [];
 
-		for (let word in lineWords) {
-			lineAnimations.push(word.animation);
-		}
-
-		if (this.hasAttribute('preview')) {
-			this.style.cursor = 'pointer';
-			this.addEventListener('click', this.handlePreviewClick);
-			const label = 'connectedCallback';
-			console.groupCollapsed(label);
-			console.log(`${this.id}: Line Previews ready...`);
-			console.log(`${this.id}: connectedCallback() completed`);
-			console.groupEnd(label);
-		}
-
-		this.handlePreviewClick = () => {
-			const previewStartTime = document.timeline.currentTime;
-
-			lineAnimations.forEach(animation => {
-				animation.cancel();
-				const element = animation.effect.target;
-				const start = parseFloat(element.getAttribute('start'));
-				const delay = previewStartTime + start;
-				animation.play();
-				animation.startTime = delay;
-			});
-		};
-	}
-
-	connectedCallback() {
-		// const words = document.querySelectorAll('mt-word');
-		// const wordsByLine = Object.groupBy(words, w => w.closest('mt-line').id);
-		// const lineAnimations = {};
-		// for (const lineId in wordsByLine) {
-		// 	const wordElements = wordsByLine[lineId];
-		// 	const animations = [];
-		// 	wordElements.forEach(word => {
-		// 		const animation = word.getAnimations();
-		// 		animations.push(animation);
-		// 	});
-		// 	lineAnimations[lineId] = animations;
+		// for (let word in lineWords) {
+		// 	lineAnimations.push(word.animation);
 		// }
+
+		// if (this.hasAttribute('preview')) {
+		// 	this.style.cursor = 'pointer';
+		// 	this.addEventListener('click', this.handlePreviewClick);
+		// 	const label = 'connectedCallback';
+		// 	console.groupCollapsed(label);
+		// 	console.log(`${this.id}: Line Previews ready...`);
+		// 	console.log(`${this.id}: connectedCallback() completed`);
+		// 	console.groupEnd(label);
+		// }
+
+		// this.handlePreviewClick = () => {
+		// 	const previewStartTime = document.timeline.currentTime;
+
+		// 	lineAnimations.forEach(animation => {
+		// 		animation.cancel();
+		// 		const element = animation.effect.target;
+		// 		const start = parseFloat(element.getAttribute('start'));
+		// 		const delay = previewStartTime + start;
+		// 		animation.play();
+		// 		animation.startTime = delay;
+		// 	});
+		// };
 	}
+
+	// connectedCallback() {
+	// const words = document.querySelectorAll('mt-word');
+	// const wordsByLine = Object.groupBy(words, w => w.closest('mt-line').id);
+	// const lineAnimations = {};
+	// for (const lineId in wordsByLine) {
+	// 	const wordElements = wordsByLine[lineId];
+	// 	const animations = [];
+	// 	wordElements.forEach(word => {
+	// 		const animation = word.getAnimations();
+	// 		animations.push(animation);
+	// 	});
+	// 	lineAnimations[lineId] = animations;
+	// }
+	// }
 
 	// countWords(node) {
 	// 	const text = node.innerText || node.textContent;

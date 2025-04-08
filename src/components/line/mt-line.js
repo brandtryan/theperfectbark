@@ -1,13 +1,9 @@
-const template = document.createElement('template');
-template.innerHTML = `
-	<slot></slot>
-`;
-
 export default class MovingTextLine extends HTMLElement {
 	constructor() {
 		super();
-		let clone = template.content.cloneNode(true);
-		this.append(clone);
+		// let clone = template.content.cloneNode(true);
+		// this.append(clone);
+		this.append(this.slot);
 
 		// const lineWords = Array.from(this.children);
 		// const lineAnimations = [];

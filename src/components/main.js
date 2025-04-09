@@ -42,8 +42,8 @@ const animationManager = {
 			entries => {
 				entries.forEach(entry => {
 					if (entry.isIntersecting) {
-						this.playPageAnimations(entry.target.id);
-						// this.pausePageAnimations(entry.target.id);
+						// this.playPageAnimations(entry.target.id);
+						this.pausePageAnimations(entry.target.id);
 						this.currentPage = entry.target; // Update current page
 					}
 				});
@@ -100,8 +100,10 @@ function getLineAnimations() {
 		const animationsOnline = [];
 
 		lineWords.forEach(w => {
-			const animation = w.animation;
-			animationsOnline.push(animation);
+			if (w.animation) {
+				const animation = w.animation;
+				animationsOnline.push(animation);
+			}
 		});
 
 		lineAnimations[lineId] = animationsOnline;
@@ -122,8 +124,10 @@ function getPageAnimations() {
 		const animationsOnPage = [];
 
 		pageWords.forEach(w => {
-			const animation = w.animation;
-			animationsOnPage.push(animation);
+			if (w.animation) {
+				const animation = w.animation;
+				animationsOnPage.push(animation);
+			}
 		});
 
 		pageAnimations[pageId] = animationsOnPage;

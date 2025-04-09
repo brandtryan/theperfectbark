@@ -1,38 +1,35 @@
 export default class MovingTextWord extends HTMLElement {
 	constructor() {
 		super();
-
 		this.textContent = this.getAttribute('txt');
-		this.keyframes = [
-			{
-				fontVariationSettings: `"wght" ${parseInt(this.getAttribute('from-axis-1'))}, "wdth" ${parseInt(
-					this.getAttribute('from-axis-2')
-				)}, "ital" ${parseInt(this.getAttribute('from-axis-3'))}, "cont" ${parseInt(this.getAttribute('from-axis-4'))}`,
-			},
-			{
-				fontVariationSettings: `"wght" ${parseInt(this.getAttribute('to-axis-1'))}, "wdth" ${parseInt(
-					this.getAttribute('to-axis-2')
-				)}, "ital" ${parseInt(this.getAttribute('to-axis-3'))}, "cont" ${parseInt(this.getAttribute('to-axis-4'))}`,
-			},
-		];
 
-		this.timing = {
-			duration: parseInt(this.getAttribute('dur')),
-			delay: parseInt(this.getAttribute('del')),
-			endDelay: parseInt(this.getAttribute('end-del')),
-			easing: this.getAttribute('ease'),
-			fill: this.getAttribute('fill'),
-			iterations: parseInt(this.getAttribute('iters')),
-			iterationStart: parseFloat(this.getAttribute('iter-start')),
-			direction: this.getAttribute('dir'),
-		};
-		// this.start = parseFloat(this.getAttribute('start'));
-		// this.rate = parseInt(this.getAttribute('rate'));
-		this.animation = this.animate(this.keyframes, this.timing);
-		// this.animation.play();
-		// this.animation.startTime = document.timeline.currentTime + this.start;
-		// this.animation.playbackRate = this.rate;
-		this.animation.pause();
+		if (this.enable) {
+			this.keyframes = [
+				{
+					fontVariationSettings: `"wght" ${parseInt(this.getAttribute('from-ax-1'))}, "wdth" ${parseInt(
+						this.getAttribute('from-ax-2')
+					)}, "ital" ${parseInt(this.getAttribute('from-ax-3'))}, "cont" ${parseInt(this.getAttribute('from-ax-4'))}`,
+				},
+				{
+					fontVariationSettings: `"wght" ${parseInt(this.getAttribute('to-ax-1'))}, "wdth" ${parseInt(
+						this.getAttribute('to-ax-2')
+					)}, "ital" ${parseInt(this.getAttribute('to-ax-3'))}, "cont" ${parseInt(this.getAttribute('to-ax-4'))}`,
+				},
+			];
+
+			this.timing = {
+				duration: parseInt(this.getAttribute('dur')),
+				delay: parseInt(this.getAttribute('del')),
+				endDelay: parseInt(this.getAttribute('end-del')),
+				easing: this.getAttribute('ease'),
+				fill: this.getAttribute('fill'),
+				iterations: parseInt(this.getAttribute('iters')),
+				iterationStart: parseFloat(this.getAttribute('iter-start')),
+				direction: this.getAttribute('dir'),
+			};
+			this.animation = this.animate(this.keyframes, this.timing);
+			this.animation.pause();
+		}
 	}
 
 	static get observedAttributes() {
@@ -50,15 +47,21 @@ export default class MovingTextWord extends HTMLElement {
 			'comp',
 			'iter-comp',
 			'pseudo',
-			'from-axis-1',
-			'to-axis-1',
-			'from-axis-2',
-			'to-axis-2',
-			'from-axis-3',
-			'to-axis-3',
-			'from-axis-4',
-			'to-Axis-4',
+			'transform',
+			'fontaxis',
+			'trans-x',
+			'trans-y',
+			'rotate',
+			'from-ax-1',
+			'to-ax-1',
+			'from-ax-2',
+			'to-ax-2',
+			'from-ax-3',
+			'to-ax-3',
+			'from-ax-4',
+			'to-ax-4',
 			'txt',
+			'enable',
 			'preview',
 		];
 	}
@@ -142,53 +145,53 @@ export default class MovingTextWord extends HTMLElement {
 	set pseudo(value) {
 		this.setAttribute('pseudo', value);
 	}
-	get fromAxis1() {
-		return parseFloat(this.getAttribute('from-axis-1'));
+	get fromAx1() {
+		return parseFloat(this.getAttribute('from-ax-1'));
 	}
-	set fromAxis1(value) {
-		this.setAttribute('fromAxis1', value);
+	set fromAx1(value) {
+		this.setAttribute('fromAx1', value);
 	}
-	get toAxis1() {
-		return parseFloat(this.getAttribute('to-axis-1'));
+	get toAx1() {
+		return parseFloat(this.getAttribute('to-ax-1'));
 	}
-	set toAxis1(value) {
-		this.setAttribute('to-axis-1', value);
+	set toAx1(value) {
+		this.setAttribute('to-ax-1', value);
 	}
-	get fromAxis2() {
-		return parseFloat(this.getAttribute('from-axis-2'));
+	get fromAx2() {
+		return parseFloat(this.getAttribute('from-ax-2'));
 	}
-	set fromAxis2(value) {
-		this.setAttribute('from-axis-2', value);
+	set fromAx2(value) {
+		this.setAttribute('from-ax-2', value);
 	}
-	get toAxis2() {
-		return parseFloat(this.getAttribute('to-axis-2'));
+	get toAx2() {
+		return parseFloat(this.getAttribute('to-ax-2'));
 	}
-	set toAxis2(value) {
-		this.setAttribute('to-axis-2', value);
+	set toAx2(value) {
+		this.setAttribute('to-ax-2', value);
 	}
-	get fromAxis3() {
-		return parseFloat(this.getAttribute('from-axis-3'));
+	get fromAx3() {
+		return parseFloat(this.getAttribute('from-ax-3'));
 	}
-	set fromAxis3(value) {
-		this.setAttribute('from-axis-3', value);
+	set fromAx3(value) {
+		this.setAttribute('from-ax-3', value);
 	}
-	get toAxis3() {
-		return parseFloat(this.getAttribute('to-axis-3'));
+	get toAx3() {
+		return parseFloat(this.getAttribute('to-ax-3'));
 	}
-	set toAxis3(value) {
-		this.setAttribute('to-axis-3', value);
+	set toAx3(value) {
+		this.setAttribute('to-ax-3', value);
 	}
-	get fromAxis4() {
-		return parseFloat(this.getAttribute('from-axis-4'));
+	get fromAx4() {
+		return parseFloat(this.getAttribute('from-ax-4'));
 	}
-	set fromAxis4(value) {
-		this.setAttribute('from-axis-4', value);
+	set fromAx4(value) {
+		this.setAttribute('from-ax-4', value);
 	}
-	get toAxis4() {
-		return parseFloat(this.getAttribute('to-axis-4'));
+	get toAx4() {
+		return parseFloat(this.getAttribute('to-ax-4'));
 	}
-	set toAxis4(value) {
-		this.setAttribute('to-axis-4', value);
+	set toAx4(value) {
+		this.setAttribute('to-ax-4', value);
 	}
 	get txt() {
 		return this.getAttribute('txt');
@@ -203,6 +206,14 @@ export default class MovingTextWord extends HTMLElement {
 		const isPreview = Boolean(value);
 		if (isPreview) this.setAttribute('preview', '');
 		else this.removeAttribute('preview');
+	}
+	get enable() {
+		return this.hasAttribute('enable');
+	}
+	set enable(value) {
+		const isEnabled = Boolean(value);
+		if (isEnabled) this.setAttribute('enable', '');
+		else this.removeAttribute('enable');
 	}
 	//#endregion
 

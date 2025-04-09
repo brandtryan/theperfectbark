@@ -1,7 +1,6 @@
 export default class VariableFontAnimatedLine extends HTMLElement {
 	constructor() {
 		super();
-		this.appendChild('slot');
 
 		// const lineWords = Array.from(this.children);
 		// const lineAnimations = [];

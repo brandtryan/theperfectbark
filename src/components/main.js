@@ -1,11 +1,9 @@
-import MovingTextWord from './word/mt-word';
-// import MovingTextLine from './line/mt-line';
-// import MovingTextPage from './page/mt-page';
+import VariableFontAnimatedWord from './word/vfa-word';
 
 const animationManager = {
-	pageElements: document.querySelectorAll('mt-page'),
+	pageElements: document.querySelectorAll('vfa-page'),
 	intersectionObserver: null,
-	currentPage: document.querySelector('mt-page'),
+	currentPage: document.querySelector('vfa-page'),
 
 	playPageAnimations(pageId, pageStartTime) {
 		pageStartTime = document.timeline.currentTime;
@@ -54,7 +52,7 @@ const animationManager = {
 	},
 
 	observePages() {
-		const pages = document.querySelectorAll('.page');
+		const pages = document.querySelectorAll('vfa-page');
 		pages.forEach(page => {
 			this.intersectionObserver.observe(page);
 			this.pausePageAnimations(page);
@@ -90,8 +88,8 @@ const animationManager = {
 const lineAnimations = getLineAnimations();
 
 function getLineAnimations() {
-	const words = document.querySelectorAll('mt-word');
-	const wordsInLine = Object.groupBy(words, w => w.closest('mt-line').id);
+	const words = document.querySelectorAll('vfa-word');
+	const wordsInLine = Object.groupBy(words, w => w.closest('vfa-line').id);
 
 	const lineAnimations = {};
 
@@ -112,8 +110,8 @@ function getLineAnimations() {
 const pageAnimations = getPageAnimations();
 
 function getPageAnimations() {
-	const words = document.querySelectorAll('mt-word');
-	const wordsOnPage = Object.groupBy(words, w => w.closest('mt-page').id);
+	const words = document.querySelectorAll('vfa-word');
+	const wordsOnPage = Object.groupBy(words, w => w.closest('vfa-page').id);
 
 	const pageAnimations = {};
 

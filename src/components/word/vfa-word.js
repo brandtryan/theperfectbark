@@ -5,26 +5,26 @@ export default class VariableFontAnimatedWord extends HTMLElement {
 		this.textContent = this.getAttribute('txt');
 		this.keyframes = [
 			{
-				fontVariationSettings: `"wght" ${parseInt(this.getAttribute('from-ax-1'))}, "wdth" ${parseInt(
+				fontVariationSettings: `"wght" ${parseFloat(this.getAttribute('from-ax-1'))}, "wdth" ${parseFloat(
 					this.getAttribute('from-ax-2')
-				)}, "ital" ${parseInt(this.getAttribute('from-ax-3'))}, "cont" ${parseInt(this.getAttribute('from-ax-4'))}`,
+				)}, "ital" ${parseFloat(this.getAttribute('from-ax-3'))}, "cont" ${parseFloat(this.getAttribute('from-ax-4'))}`,
 			},
 			{
-				fontVariationSettings: `"wght" ${parseInt(this.getAttribute('to-ax-1'))}, "wdth" ${parseInt(
+				fontVariationSettings: `"wght" ${parseFloat(this.getAttribute('to-ax-1'))}, "wdth" ${parseFloat(
 					this.getAttribute('to-ax-2')
-				)}, "ital" ${parseInt(this.getAttribute('to-ax-3'))}, "cont" ${parseInt(this.getAttribute('to-ax-4'))}`,
+				)}, "ital" ${parseFloat(this.getAttribute('to-ax-3'))}, "cont" ${parseFloat(this.getAttribute('to-ax-4'))}`,
 			},
 		];
 
 		this.timing = {
-			duration: parseInt(this.getAttribute('dur')),
-			delay: parseInt(this.getAttribute('del')),
-			endDelay: parseInt(this.getAttribute('end-del')),
-			easing: this.getAttribute('ease'),
-			fill: this.getAttribute('fill'),
-			iterations: parseInt(this.getAttribute('iters')),
-			iterationStart: parseFloat(this.getAttribute('iter-start')),
-			direction: this.getAttribute('dir'),
+			duration: parseInt(this.getAttribute('dur')) || 0,
+			delay: parseInt(this.getAttribute('del')) || 0,
+			endDelay: parseInt(this.getAttribute('end-del')) || 0,
+			easing: this.getAttribute('ease') || 'linear',
+			fill: this.getAttribute('fill') || 'none',
+			iterations: parseInt(this.getAttribute('iters')) || 1,
+			iterationStart: parseFloat(this.getAttribute('iter-start')) || 0.0,
+			direction: this.getAttribute('dir') || 'normal',
 		};
 		this.animation = this.animate(this.keyframes, this.timing);
 		this.animation.pause();

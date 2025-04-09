@@ -1,13 +1,7 @@
-const template = document.createElement('template');
-template.innerHTML = `
-	<slot></slot>
-`;
-
-export default class MovingTextLine extends HTMLElement {
+export default class VariableFontAnimatedLine extends HTMLElement {
 	constructor() {
 		super();
-		let clone = template.content.cloneNode(true);
-		this.append(clone);
+		this.appendChild('slot');
 
 		// const lineWords = Array.from(this.children);
 		// const lineAnimations = [];
@@ -99,6 +93,6 @@ export default class MovingTextLine extends HTMLElement {
 	// };
 }
 
-if (!customElements.get('mt-line')) {
-	customElements.define('mt-line', MovingTextLine);
+if (!customElements.get('vfa-line')) {
+	customElements.define('vfa-line', VariableFontAnimatedLine);
 }

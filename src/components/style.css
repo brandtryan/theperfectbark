@@ -44,12 +44,12 @@ html {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-article {
+vfa-manuscript {
 	display: grid;
 	height: 100%;
 }
 
-mt-page {
+vfa-page {
 	display: grid;
 	border: 2px solid lightsalmon;
 	width: 52ch;
@@ -67,15 +67,15 @@ mt-page {
 	margin-block-end: 0;
 }
 
-mt-line {
+vfa-line {
 	display: block;
 }
 
-mt-line:hover::after {
+vfa-line:hover::after {
 	display: none;
 }
 
-mt-word:hover::after {
+vfa-word:hover::after {
 	content: attr(id);
 	display: block;
 	position: absolute;

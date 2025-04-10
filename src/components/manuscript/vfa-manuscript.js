@@ -177,16 +177,16 @@ class VfaManuscriptComponent extends HTMLElement {
 
 			animations.forEach(animation => {
 				const wordElement = animation.effect.target; // Get the target vfa-word
-				// Use the 'start' property (from the attribute) for staggered timing
+				// Use the 'start' property (from the attribute) for sequenceed timing
 				// Fallback to 0 if start attribute/property is missing or invalid
-				const staggerDelay = wordElement.start || 0;
+				const sequenceDelay = wordElement.start || 0;
 
-				// Validate staggerDelay
-				const validStaggerDelay = isNaN(staggerDelay) ? 0 : Math.max(0, staggerDelay);
+				// Validate sequenceDelay
+				const validSequenceDelay = isNaN(sequenceDelay) ? 0 : Math.max(0, sequenceDelay);
 
 				// Set the animation's startTime relative to the page becoming visible
 				// This overrides any 'delay' set in the animation's timing options
-				animation.startTime = pageVisibleTime + validStaggerDelay;
+				animation.startTime = pageVisibleTime + validSequenceDelay;
 				// No need to call play() when setting startTime, it starts automatically.
 			});
 		} else {

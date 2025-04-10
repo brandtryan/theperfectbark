@@ -66,11 +66,11 @@ vfa-page {
 	/* Limit width */
 	min-height: 100vh;
 	/* Ensure page takes full viewport height */
-	height: auto;
+	/* height: auto; */
 	/* Allow height to grow if content exceeds viewport */
-	/* content-visibility: auto; */
+	content-visibility: auto;
 	/* Can cause issues with IntersectionObserver/layout sometimes, test carefully */
-	/* contain-intrinsic-inline-size: 100vw; */
+	contain-intrinsic-inline-size: 100vw;
 	/* Might not be needed with explicit width */
 	/* contain-intrinsic-block-size: 100vh; */
 	place-self: center;

@@ -1,16 +1,5 @@
-// vfa-word.js
-// Your provided code for the vfa-word component.
-// Key aspects:
-// - Reflects many attributes to properties.
-// - Creates keyframes and timing options in connectedCallback.
-// - Calls this.animate() and stores the result in this.animation.
-// - Starts the animation paused.
-
-export default class VariableFontAnimatedWord extends HTMLElement {
+export default class VfaWordComponent extends HTMLElement {
 	static get observedAttributes() {
-		// Ensure all attributes used in connectedCallback are observed if they
-		// might change and require the animation to be recreated.
-		// For simplicity now, assuming initial attributes are sufficient.
 		return [
 			'start',
 			'current',
@@ -49,7 +38,7 @@ export default class VariableFontAnimatedWord extends HTMLElement {
 		// console.log('vfa-word constructor says hello');
 	}
 
-	//#region Property/Attribute Reflection (Your getters/setters here)
+	//#region Property/Attribute Reflection
 	get start() {
 		return parseFloat(this.getAttribute('start'));
 	}
@@ -258,7 +247,7 @@ export default class VariableFontAnimatedWord extends HTMLElement {
 		timing.iterationStart = Math.max(0, timing.iterationStart);
 
 		// Check if essential properties are valid (duration needs to be > 0 for animation to run)
-		if (timing.duration > 0) {
+		if (timing.duration > 0 && this.enable) {
 			try {
 				// Create the animation
 				const animation = this.animate(keyframes, timing);
@@ -271,9 +260,6 @@ export default class VariableFontAnimatedWord extends HTMLElement {
 				// Log errors during animation creation
 				console.error(`vfa-word: Error creating animation for "${this.txt}"`, error, { keyframes, timing });
 			}
-		} else {
-			// Log if duration is not valid for animation
-			// console.warn(`vfa-word: Animation not created for "${this.txt}" due to invalid duration (${timing.duration})`);
 		}
 	}
 
@@ -288,5 +274,5 @@ export default class VariableFontAnimatedWord extends HTMLElement {
 
 // Define the custom element if it hasn't been defined yet
 if (!customElements.get('vfa-word')) {
-	customElements.define('vfa-word', VariableFontAnimatedWord);
+	customElements.define('vfa-word', VfaWordComponent);
 }

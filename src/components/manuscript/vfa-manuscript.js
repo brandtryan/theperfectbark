@@ -1,5 +1,3 @@
-// vfa-manuscript.js
-
 class VfaManuscriptComponent extends HTMLElement {
 	constructor() {
 		super();
@@ -18,10 +16,9 @@ class VfaManuscriptComponent extends HTMLElement {
 		this.observerOptions = {
 			root: null,
 			rootMargin: '0px',
-			threshold: 0.6, // Use the threshold from your main.js
+			threshold: 0.6,
 		};
 
-		// --- Bind Methods ---
 		// Ensure 'this' context is correct in callbacks and event handlers
 		this.handleIntersection = this.handleIntersection.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
@@ -30,7 +27,7 @@ class VfaManuscriptComponent extends HTMLElement {
 
 	connectedCallback() {
 		console.log('vfa-manuscript connected');
-		// Defer setup until child elements are likely defined and parsed
+		// wait to setup until child elements are likely defined and parsed
 		requestAnimationFrame(() => {
 			this.initializeManuscript();
 		});
@@ -213,10 +210,10 @@ class VfaManuscriptComponent extends HTMLElement {
 		const { excludeAnimations = [] } = options; // Option to exclude specific animations
 		console.log('Pausing all animations...');
 		this.animationsByPage.forEach(pageAnimations => {
-			pageAnimations.forEach(anim => {
-				if (!excludeAnimations.includes(anim)) {
-					anim.pause();
-					// anim.currentTime = 0; // Optional reset
+			pageAnimations.forEach(animation => {
+				if (!excludeAnimations.includes(animation)) {
+					animation.pause();
+					// animation.currentTime = 0; // Optional reset
 				}
 			});
 		});

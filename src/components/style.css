@@ -5,7 +5,6 @@
 	font-stretch: 60% 140%;
 	font-display: swap;
 	unicode-range: U+00-7F, U+2014;
-	/* Consider if full range needed */
 }
 
 html {
@@ -36,31 +35,32 @@ html {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	scroll-behavior: smooth;
-	/* Add smooth scrolling for arrow keys */
 }
 
 body {
 	margin: 0;
-	/* Ensure body has no margin */
+	padding: 0;
 	height: 100%;
 }
 
 main {
 	height: 100%;
+	margin: 0;
+	padding: 0;
 	/* Ensure main takes full height if needed */
 }
 
 vfa-manuscript {
 	display: block;
-	/* Changed from grid - pages stack vertically */
 	height: 100%;
 	overflow-y: auto;
 	/* Allow manuscript itself to scroll if needed, though page scrolling is primary */
+	margin: 0;
+	padding: 0;
 }
 
 vfa-page {
 	display: grid;
-	/* Use grid for centering content within page */
 	border: 2px solid lightsalmon;
 	width: 52ch;
 	/* Limit width */
@@ -74,40 +74,32 @@ vfa-page {
 	/* Might not be needed with explicit width */
 	/* contain-intrinsic-block-size: 100vh; */
 	place-self: center;
-	/* Center page horizontally */
 	place-content: center;
-	/* Center content vertically within the page */
 	font-size: clamp(1.4rem, 0.75vw + 1.24rem, 2.2rem);
 	white-space: nowrap;
-	/* Prevent lines from wrapping */
 	overflow: visible;
-	/* Allow potential overflow */
-	padding: 2rem 2.5rem;
-	/* Added vertical padding */
 	margin: 0 auto;
-	/* Center page block */
 	box-sizing: border-box;
 	transition: background-color 0.3s ease;
-	/* Feedback for active page */
+	margin: 0;
+	padding: 0;
 }
 
-/* Style for active page (set by JS) */
 vfa-page.vfa-page-active {
 	background-color: #2a4a63;
-	/* Slightly different background for active */
+	/* different background for active */
 }
 
 
 vfa-line {
 	display: block;
-	/* Lines stack */
 	cursor: pointer;
 	/* Indicate clickable for preview */
-	padding: 0.2em 0;
-	/* Add some padding for easier clicking */
 	border: 1px dashed transparent;
 	/* Hover effect */
 	transition: background-color 0.2s ease, border-color 0.2s ease;
+	margin: 0;
+	padding: 0;
 }
 
 vfa-line:hover {
@@ -121,41 +113,30 @@ vfa-line:hover::after {
 }
 
 vfa-word {
-	/* Inherits font settings from html/body */
-	margin-right: 0.25em;
-	/* Space words */
-	position: relative;
-	/* Needed for absolute positioning of hover pseudo-element */
+	margin: 0;
+	padding: 0;
 }
 
 /* Word ID display on hover */
 vfa-word:hover::after {
 	content: attr(id);
 	display: block;
+	place-self: center;
 	position: absolute;
-	background-color: rgba(0, 0, 0, 0.8);
-	color: cornflowerblue;
-	padding: 3px 6px;
-	border-radius: 3px;
+	top: 10px;
+	background-color: rgba(0, 0, 0, 0.5);
+	color: rgb(159, 189, 245);
+	padding: 6px 8px;
+	border-radius: 5px;
 	font-size: 1.1rem;
-	/* Smaller font size */
 	font-family: system-ui, sans-serif;
-	/* Use system font for UI element */
 	font-variation-settings: normal;
-	/* Reset variation settings */
-	font-weight: normal;
+	font-weight: 700;
 	font-stretch: normal;
 	line-height: 1.2;
-	bottom: 100%;
-	/* Position above the word */
 	left: 50%;
 	transform: translateX(-50%);
-	/* Center horizontally */
-	margin-bottom: 4px;
-	/* Space above word */
 	z-index: 10;
 	white-space: nowrap;
-	/* Prevent wrapping */
 	pointer-events: none;
-	/* Don't interfere with clicks */
 }

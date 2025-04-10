@@ -1,5 +1,3 @@
-// vfa-page-line.js
-
 // Basic placeholder for vfa-page
 class VfaPageComponent extends HTMLElement {
 	constructor() {
@@ -38,9 +36,13 @@ class VfaLineComponent extends HTMLElement {
 		if (animations.length > 0) {
 			console.log(`Previewing ${animations.length} animations for this line.`);
 			// Reset and play animations for this line only
-			animations.forEach(anim => {
-				anim.currentTime = 0;
-				anim.play();
+			animations.forEach(animation => {
+				const element = animation.effect.target;
+				const start = element.start;
+				const delay = document.timeline.currentTime + start;
+				animation.currentTime = 0;
+				animation.play();
+				animation.startTime = delay;
 			});
 
 			// *** Dispatch a custom event so the manuscript can pause others ***

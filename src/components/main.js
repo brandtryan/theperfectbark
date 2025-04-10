@@ -1,4 +1,4 @@
-import VariableFontAnimatedWord from './word/vfa-word';
+import VariableFontAnimatedWord from './word/PREvfa-word';
 
 const animationManager = {
 	pageElements: document.querySelectorAll('vfa-page'),

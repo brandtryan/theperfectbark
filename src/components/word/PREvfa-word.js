@@ -238,6 +238,9 @@ export default class VariableFontAnimatedWord extends HTMLElement {
 		];
 
 		const timing = {
+			// NOTE: The 'del' attribute value is used here for the delay property.
+			// The manuscript component might override this by setting startTime directly
+			// based on the 'start' attribute when a page becomes visible.
 			duration: this.dur || 0, // Default to 0 if attribute missing/invalid
 			delay: this.del || 0,
 			endDelay: this.endDel || 0,
@@ -276,14 +279,6 @@ export default class VariableFontAnimatedWord extends HTMLElement {
 			// console.warn(`vfa-word: Animation not created for "${this.txt}" due to invalid duration (${timing.duration})`);
 		}
 	}
-
-	// disconnectedCallback() {} // Add cleanup if needed
-
-	// attributeChangedCallback(name, oldValue, newValue) {
-	//  If attributes changing should dynamically update the animation,
-	//  add logic here to cancel the old animation and create a new one.
-	//  For now, assuming initial setup is sufficient.
-	// }
 }
 
 // Define the custom element if it hasn't been defined yet

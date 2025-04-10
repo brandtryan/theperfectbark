@@ -1,11 +1,3 @@
-/*********************
-wght 47 200 900
-wdth 60 60 140 - use %
-ital 0 0 12
-cont 0 100 100
-*********************/
-
-
 @font-face {
 	font-family: Ikarus;
 	src: url("./Ikarus.woff2") format("woff2-variations");
@@ -13,6 +5,7 @@ cont 0 100 100
 	font-stretch: 60% 140%;
 	font-display: swap;
 	unicode-range: U+00-7F, U+2014;
+	/* Consider if full range needed */
 }
 
 html {
@@ -31,7 +24,7 @@ html {
 		"ss11" 1,
 		"ss12" 1,
 		"ss18" 1;
-	font-variation-settings: "ital" 0, "cont" 0;
+	font-variation-settings: "ital" 0, "cont" 0, "wght" 325, "wdth" 100;
 	font-weight: 325;
 	font-stretch: 100%;
 	height: 100%;
@@ -42,49 +35,127 @@ html {
 	text-rendering: optimizeLegibility;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	scroll-behavior: smooth;
+	/* Add smooth scrolling for arrow keys */
+}
+
+body {
+	margin: 0;
+	/* Ensure body has no margin */
+	height: 100%;
+}
+
+main {
+	height: 100%;
+	/* Ensure main takes full height if needed */
 }
 
 vfa-manuscript {
-	display: grid;
+	display: block;
+	/* Changed from grid - pages stack vertically */
 	height: 100%;
+	overflow-y: auto;
+	/* Allow manuscript itself to scroll if needed, though page scrolling is primary */
 }
 
 vfa-page {
 	display: grid;
+	/* Use grid for centering content within page */
 	border: 2px solid lightsalmon;
 	width: 52ch;
-	height: 100vh;
-	content-visibility: auto;
-	contain-intrinsic-inline-size: 100vw;
-	contain-intrinsic-block-size: 100vh;
+	/* Limit width */
+	min-height: 100vh;
+	/* Ensure page takes full viewport height */
+	height: auto;
+	/* Allow height to grow if content exceeds viewport */
+	/* content-visibility: auto; */
+	/* Can cause issues with IntersectionObserver/layout sometimes, test carefully */
+	/* contain-intrinsic-inline-size: 100vw; */
+	/* Might not be needed with explicit width */
+	/* contain-intrinsic-block-size: 100vh; */
 	place-self: center;
+	/* Center page horizontally */
 	place-content: center;
+	/* Center content vertically within the page */
 	font-size: clamp(1.4rem, 0.75vw + 1.24rem, 2.2rem);
 	white-space: nowrap;
+	/* Prevent lines from wrapping */
 	overflow: visible;
-	padding-left: 2.5rem;
-	margin-block-start: 0;
-	margin-block-end: 0;
+	/* Allow potential overflow */
+	padding: 2rem 2.5rem;
+	/* Added vertical padding */
+	margin: 0 auto;
+	/* Center page block */
+	box-sizing: border-box;
+	transition: background-color 0.3s ease;
+	/* Feedback for active page */
 }
+
+/* Style for active page (set by JS) */
+vfa-page.vfa-page-active {
+	background-color: #2a4a63;
+	/* Slightly different background for active */
+}
+
 
 vfa-line {
 	display: block;
+	/* Lines stack */
+	cursor: pointer;
+	/* Indicate clickable for preview */
+	padding: 0.2em 0;
+	/* Add some padding for easier clicking */
+	border: 1px dashed transparent;
+	/* Hover effect */
+	transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
+vfa-line:hover {
+	border-color: #555;
+	background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Remove hover effect on line text itself */
 vfa-line:hover::after {
 	display: none;
 }
 
+vfa-word {
+	/* Inherits font settings from html/body */
+	margin-right: 0.25em;
+	/* Space words */
+	position: relative;
+	/* Needed for absolute positioning of hover pseudo-element */
+}
+
+/* Word ID display on hover */
 vfa-word:hover::after {
 	content: attr(id);
 	display: block;
 	position: absolute;
-	background-color: rgba(0, 0, 0, 0.7);
+	background-color: rgba(0, 0, 0, 0.8);
 	color: cornflowerblue;
-	padding: 5px;
+	padding: 3px 6px;
 	border-radius: 3px;
-	font-size: 1.2rem;
-	top: 10px;
-	right: 10px;
+	font-size: 1.1rem;
+	/* Smaller font size */
+	font-family: system-ui, sans-serif;
+	/* Use system font for UI element */
+	font-variation-settings: normal;
+	/* Reset variation settings */
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 1.2;
+	bottom: 100%;
+	/* Position above the word */
+	left: 50%;
+	transform: translateX(-50%);
+	/* Center horizontally */
+	margin-bottom: 4px;
+	/* Space above word */
 	z-index: 10;
+	white-space: nowrap;
+	/* Prevent wrapping */
+	pointer-events: none;
+	/* Don't interfere with clicks */
 }

@@ -1,6 +1,6 @@
 @font-face {
 	font-family: Ikarus;
-	src: url("./Ikarus.woff") format("woff");
+	src: url("./Ikarus.woff2") format("woff2-variations");
 	font-weight: 47 900;
 	font-stretch: 60% 140%;
 	font-display: swap;

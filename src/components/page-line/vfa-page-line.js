@@ -10,7 +10,6 @@ class VfaPageComponent extends HTMLElement {
 	}
 }
 
-// Updated vfa-line to dispatch event on click
 class VfaLineComponent extends HTMLElement {
 	constructor() {
 		super();

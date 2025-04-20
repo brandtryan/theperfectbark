@@ -23,10 +23,23 @@ class VfaManuscriptComponent extends HTMLElement {
 		this.handleIntersection = this.handleIntersection.bind(this);
 		this.handleKeyDown = this.handleKeyDown.bind(this);
 		this.handlePreviewLine = this.handlePreviewLine.bind(this); // Handler for line preview event
+
+		// Enable animations on a third of the words for seeding/temporary purposes
+		const allWords = Array.from(document.querySelectorAll('vfa-word'));
+		allWords.forEach((word, index) => {
+			if (index % 3 === 0) {
+				word.setAttribute('enable', '');
+			}
+		});
 	}
 
 	connectedCallback() {
 		console.log('vfa-manuscript connected');
+		if (document.getAnimations() !== null) {
+			console.log('Document has animations');
+		} else {
+			console.log('No animations ready');
+		}
 		// wait to setup until child elements are likely defined and parsed
 		requestAnimationFrame(() => {
 			this.initializeManuscript();

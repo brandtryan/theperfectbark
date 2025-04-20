@@ -7,6 +7,14 @@ class VfaPageComponent extends HTMLElement {
 	connectedCallback() {
 		// console.log('vfa-page connected', this.id);
 		// Add specific page logic if needed later
+		// --- Enable every third word for placeholder animating ---
+		// const allWords = Array.from(document.querySelectorAll('vfa-word'));
+		// allWords.forEach((word, index) => {
+		// 	if (index % 3 === 0) {
+		// 		word.setAttribute('enable', '');
+		// 		console.log('placeholder animations enabled');
+		// 	}
+		// });
 	}
 }
 

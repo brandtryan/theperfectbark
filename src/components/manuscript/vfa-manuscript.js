@@ -208,7 +208,7 @@ class VfaManuscriptComponent extends HTMLElement {
 
 	pauseAllAnimations(options = {}) {
 		const { excludeAnimations = [] } = options; // Option to exclude specific animations
-		console.log('Pausing all animations...');
+		// console.log('Pausing all animations...');
 		this.animationsByPage.forEach(pageAnimations => {
 			pageAnimations.forEach(animation => {
 				if (!excludeAnimations.includes(animation)) {

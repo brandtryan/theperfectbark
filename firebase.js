@@ -13,12 +13,12 @@ const firebaseConfig = {
   projectId: "theperfectbark-a7f24",
   storageBucket: "theperfectbark-a7f24.firebasestorage.app",
   messagingSenderId: "451610776408",
-  appId: "1:451610776408:web:275f0b6d37c1ce64144b2d",
-  measurementId: "G-D38EW0X7CZ"
+  appId: "1:451610776408:web:c2e450be2b738540144b2d",
+  measurementId: "G-F37B42973C"
 };
 
 // Initialize Firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
 // Initialize Performance Monitoring and get a reference to the service

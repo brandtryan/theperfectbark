@@ -1,3 +1,4 @@
+// This file is only for reference and will be deleted
 import VariableFontAnimatedWord from './word/PREvfa-word';
 
 const animationManager = {

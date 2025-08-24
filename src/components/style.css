@@ -24,8 +24,6 @@ html {
 		"ss12" 1,
 		"ss18" 1;
 	font-variation-settings: "ital" 0, "cont" 0, "wght" 325, "wdth" 100;
-	font-weight: 325;
-	font-stretch: 100%;
 	height: 100%;
 	line-height: 1.4;
 	margin: 0;
@@ -44,19 +42,13 @@ body {
 }
 
 main {
-	height: 100%;
-	margin: 0;
-	padding: 0;
 	/* Ensure main takes full height if needed */
 }
 
 vfa-manuscript {
 	display: block;
-	height: 100%;
 	overflow-y: auto;
 	/* Allow manuscript itself to scroll if needed, though page scrolling is primary */
-	margin: 0;
-	padding: 0;
 }
 
 vfa-page {
@@ -144,7 +136,7 @@ vfa-word:hover::after {
 	pointer-events: none;
 }
 
-@keyframes shake-little {
+/* @keyframes shake-little {
 	2% {
 		transform: translate(0px, 1px) rotate(0.5deg);
 	}
@@ -345,4 +337,4 @@ vfa-word:hover::after {
 	100% {
 		transform: translate(0, 0) rotate(0);
 	}
-}
+} */

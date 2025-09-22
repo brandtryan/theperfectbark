@@ -41,17 +41,13 @@ body {
 	height: 100%;
 }
 
-main {
-	/* Ensure main takes full height if needed */
-}
-
-vfa-manuscript {
+#app {
 	display: block;
 	overflow-y: auto;
 	/* Allow manuscript itself to scroll if needed, though page scrolling is primary */
 }
 
-vfa-page {
+.page {
 	display: grid;
 	border: 2px solid lightsalmon;
 	width: 52ch;
@@ -81,12 +77,12 @@ vfa-page {
 	animation-iteration-count: infinite;
 }
 
-vfa-page.vfa-page-active {
+.page.page-active {
 	background-color: #2a4a63;
 	/* different background for active */
 }
 
-vfa-line {
+.line {
 	display: block;
 	cursor: pointer;
 	/* Indicate clickable for preview */
@@ -97,23 +93,23 @@ vfa-line {
 	padding: 0;
 }
 
-vfa-line:hover {
+.line:hover {
 	border-color: #555;
 	background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Remove hover effect on line text itself */
-vfa-line:hover::after {
+.line:hover::after {
 	display: none;
 }
 
-vfa-word {
+.word {
 	margin: 0;
 	padding: 0;
 }
 
 /* Word ID display on hover */
-vfa-word:hover::after {
+.word:hover::after {
 	content: attr(id);
 	display: block;
 	place-self: center;

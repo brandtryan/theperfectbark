@@ -12,8 +12,11 @@ html {
 	color: #f1f1f1f5;
 	font-family: Ikarus, system-ui, Avenir, Helvetica, Arial, sans-serif;
 	font-size: 62.5%;
+}
+
+body {
 	font-feature-settings:
-		"case" 1,
+		"kern" 1,
 		"liga" 1,
 		"ss02" 1,
 		"ss03" 1,
@@ -21,67 +24,26 @@ html {
 		"ss06" 1,
 		"ss10" 1,
 		"ss11" 1,
-		"ss12" 1,
-		"ss18" 1;
-	font-variation-settings: "ital" 0, "cont" 0, "wght" 325, "wdth" 100;
-	font-weight: 325;
-	font-stretch: 100%;
+		"ss12" 1;
+	font-variation-settings: "ital" 0, "cont" 0, "wght" 300, "wdth" 100;
 	height: 100%;
-	line-height: 1.4;
-	margin: 0;
-	padding: 0;
+	width: max-content;
+	font-size: clamp(1.6rem, 1vw + 1rem, 2.2rem);
+	line-height: clamp(2.5rem, 1.35vw + 1.85rem, 3.5rem);
 	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	scroll-behavior: smooth;
-}
-
-body {
-	margin: 0;
-	padding: 0;
-	height: 100%;
-}
-
-main {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	/* Ensure main takes full height if needed */
-}
-
-vfa-manuscript {
-	display: block;
-	height: 100%;
-	overflow-y: auto;
-	/* Allow manuscript itself to scroll if needed, though page scrolling is primary */
-	margin: 0;
-	padding: 0;
 }
 
 vfa-page {
-	display: grid;
-	border: 2px solid lightsalmon;
-	width: 52ch;
-	/* Limit width */
-	min-height: 100vh;
-	/* Ensure page takes full viewport height */
-	/* height: auto; */
-	/* Allow height to grow if content exceeds viewport */
 	content-visibility: auto;
-	/* Can cause issues with IntersectionObserver/layout sometimes, test carefully */
-	contain-intrinsic-inline-size: 100vw;
-	/* Might not be needed with explicit width */
-	/* contain-intrinsic-block-size: 100vh; */
+	display: grid;
+	margin-left: 1em;
+	margin-right: 1em;
+	min-height: 100vh;
+	overflow: visible;
 	place-self: center;
 	place-content: center;
-	font-size: clamp(1.4rem, 0.75vw + 1.24rem, 2.2rem);
-	white-space: nowrap;
-	overflow: visible;
-	margin: 0 auto;
-	box-sizing: border-box;
 	transition: background-color 0.3s ease;
-	padding: 0;
+	white-space: nowrap;
 }
 
 vfa-page.vfa-page-active {
@@ -92,28 +54,9 @@ vfa-page.vfa-page-active {
 
 vfa-line {
 	display: block;
-	cursor: pointer;
-	/* Indicate clickable for preview */
-	border: 1px dashed transparent;
-	/* Hover effect */
-	transition: background-color 0.2s ease, border-color 0.2s ease;
-	margin: 0;
-	padding: 0;
-}
-
-vfa-line:hover {
-	border-color: #555;
-	background-color: rgba(255, 255, 255, 0.05);
-}
-
-/* Remove hover effect on line text itself */
-vfa-line:hover::after {
-	display: none;
-}
-
-vfa-word {
-	margin: 0;
-	padding: 0;
+	letter-spacing: 0;
+	word-spacing: 0.12rem;
+	font-kerning: normal;
 }
 
 /* Word ID display on hover */

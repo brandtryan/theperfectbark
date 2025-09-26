@@ -8,6 +8,7 @@
 }
 
 html {
+	display: grid;
 	background-color: #213547;
 	color: #f1f1f1f5;
 	font-size: 62.5%;
@@ -17,6 +18,9 @@ html {
 }
 
 body {
+	display: grid;
+	grid-row: auto;
+	border: 1px solid cornflowerblue;
 	font-feature-settings:
 		"kern" 1,
 		"liga" 1,
@@ -31,22 +35,27 @@ body {
 	font-synthesis: none;
 	font-variation-settings: "ital" 0, "cont" 0, "wght" 300, "wdth" 100;
 	line-height: clamp(2.5rem, 1.35vw + 1.85rem, 3.5rem);
-	margin: 0 auto;
+	margin: 0;
 	text-rendering: geometricPrecision;
-	width: max-content;
 }
 
 .page {
-	content-visibility: auto;
 	display: grid;
-	margin-left: 1em;
-	margin-right: 1em;
+	grid-column: auto;
+	border: 1px solid fuchsia;
+	content-visibility: auto;
 	min-height: 100vh;
 	overflow: visible;
-	place-self: center;
-	place-content: center;
+	align-content: center;
+	justify-content: left;
+	margin: 0 auto;
 	transition: background-color 0.3s ease;
 	white-space: nowrap;
+	width: fit-content;
+}
+
+p {
+	margin-block: 0;
 }
 
 .page.page-active {
@@ -57,9 +66,14 @@ body {
 
 .line {
 	display: block;
+	border: 1px dashed salmon;
 	letter-spacing: 0;
 	word-spacing: 0.12rem;
 	font-kerning: normal;
+	margin-block: 0;
+	width: 100%;
+	margin-left: 1em;
+	margin-right: 1em;
 }
 
 /* Word ID display on hover */

@@ -7,95 +7,70 @@
 	unicode-range: U+00-7F, U+2014;
 }
 
-html {
-	display: grid;
-	background-color: #213547;
-	color: #f1f1f1f5;
-	font-size: 62.5%;
-	font-family: Ikarus, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
-		Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji",
-		"Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+/* 1. Foundational and Typographic Styles */
+:root {
+	/* Fluid typography: scales from 16px at 412px to 24px at 1200px */
+	font-size: clamp(1rem, 0.743rem + 1.018vw, 1.5rem);
+	font-family: 'Ikarus', serif;
+	line-height: 1.6;
+	color: #333;
+	background-color: #fdfdfd;
 }
 
 body {
-	display: grid;
-	grid-row: auto;
-	border: 1px solid cornflowerblue;
-	font-feature-settings:
-		"kern" 1,
-		"liga" 1,
-		"ss02" 1,
-		"ss03" 1,
-		"ss04" 1,
-		"ss06" 1,
-		"ss10" 1,
-		"ss11" 1,
-		"ss12" 1;
-	font-size: clamp(1.6rem, 1vw + 1rem, 2.2rem);
-	font-synthesis: none;
-	font-variation-settings: "ital" 0, "cont" 0, "wght" 300, "wdth" 100;
-	line-height: clamp(2.5rem, 1.35vw + 1.85rem, 3.5rem);
 	margin: 0;
-	text-rendering: geometricPrecision;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
-.page {
+/* 2. Layout and Centering */
+.fullscreen-wrapper {
 	display: grid;
-	grid-column: auto;
-	border: 1px solid fuchsia;
-	content-visibility: auto;
+	place-items: center;
 	min-height: 100vh;
-	overflow: visible;
-	align-content: center;
-	justify-content: left;
-	margin: 0 auto;
-	transition: background-color 0.3s ease;
-	white-space: nowrap;
-	width: fit-content;
+	padding: 1rem;
+	box-sizing: border-box;
 }
 
-p {
-	margin-block: 0;
-}
-
-.page.page-active {
-	background-color: #2a4a63;
-	/* different background for active */
-}
-
-
-.line {
-	display: block;
-	border: 1px dashed salmon;
-	letter-spacing: 0;
-	word-spacing: 0.12rem;
-	font-kerning: normal;
-	margin-block: 0;
+/* 3. Scroll Snap Container */
+.scroll-container {
 	width: 100%;
-	margin-left: 1em;
-	margin-right: 1em;
+	max-width: 380px;
+	/* Target width for 412px viewport with 1rem margins */
+	height: 90vh;
+	/* Make it scrollable */
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
 }
 
-/* Word ID display on hover */
-.word:hover::after {
-	content: attr(id);
-	display: block;
-	place-self: center;
-	position: absolute;
-	top: 10px;
-	background-color: rgba(0, 0, 0, 0.5);
-	color: rgb(159, 189, 245);
-	padding: 6px 8px;
-	border-radius: 5px;
-	font-size: 1.1rem;
-	font-family: system-ui, sans-serif;
-	font-variation-settings: normal;
-	font-weight: 700;
-	font-stretch: normal;
-	line-height: 1.2;
-	left: 50%;
-	transform: translateX(-50%);
-	z-index: 10;
-	white-space: nowrap;
-	pointer-events: none;
+/* 4. Styles for SplitText Generated Elements */
+.text-content {
+	/* The original container for the text */
+	text-align: left;
+}
+
+.line-wrapper {
+	/* Class applied by SplitText to each line <div> */
+	scroll-snap-align: start;
+	/* Snap point is the top of the line */
+	overflow: hidden;
+	/* Crucial for masking animations */
+
+	/* The following is not strictly required but improves layout */
+	padding: 0.5em 0;
+}
+
+.line-wrapper.word-span {
+	/* Class applied by SplitText to each word <span> */
+	display: inline-block;
+	/* Allows transforms to be applied */
+	white-space: pre;
+	/* Renders the trailing space correctly */
+}
+
+/* 5. Sample Performant Animation */
+.line-wrapper {
+	/* Set initial state for animation */
+	transform: translateY(30px);
+	opacity: 0;
 }
